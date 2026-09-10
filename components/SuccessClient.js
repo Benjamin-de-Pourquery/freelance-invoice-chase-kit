@@ -6,28 +6,36 @@ import { useSearchParams } from "next/navigation";
 
 const LABELS = {
   fr: {
-    loading: "Vérification du paiement Stripe…",
-    missingSecretTitle: "Configuration requise",
+    loading: "Confirmation de ton paiement en cours…",
+    badgePending: "Confirmation de paiement",
+    missingSecretTitle: "Téléchargement temporairement indisponible",
     missingSecret:
-      "STRIPE_SECRET_KEY n'est pas configurée sur Vercel. Colle ta clé sk_test_… dans les variables d'environnement du projet, puis redéploie. Les fichiers du pack ne sont pas exposés publiquement.",
-    noSession: "Aucun session_id dans l'URL. Reviens via le Payment Link Stripe après paiement.",
-    invalid: "Session invalide ou paiement non confirmé.",
-    unlocked: "Paiement vérifié — télécharge ton pack.",
-    files: "Fichiers inclus",
+      "Nous ne pouvons pas débloquer ton pack pour le moment. Réessaie dans quelques minutes. Si le problème persiste, contacte le support via GitHub.",
+    noSession:
+      "Nous n'avons pas trouvé ta commande. Reviens depuis la page de confirmation après paiement, ou consulte l'e-mail de reçu Stripe.",
+    invalid: "Paiement non confirmé ou lien expiré. Si tu as bien payé, vérifie ton e-mail de confirmation ou contacte le support.",
+    unlocked: "Paiement confirmé",
+    files: "Télécharge ton pack",
     back: "← Retour à la landing",
     tip: "Astuce : importe le CSV dans Notion, Google Sheets ou Excel. Trie par âge (jours) décroissant.",
+    titleOk: "Merci — ton kit est prêt.",
+    titlePending: "Confirmation de paiement",
   },
   en: {
-    loading: "Verifying Stripe payment…",
-    missingSecretTitle: "Configuration required",
+    loading: "Confirming your payment…",
+    badgePending: "Payment confirmation",
+    missingSecretTitle: "Downloads temporarily unavailable",
     missingSecret:
-      "STRIPE_SECRET_KEY is not set on Vercel. Paste your sk_test_… key in the project env vars, then redeploy. Pack files are not publicly exposed.",
-    noSession: "No session_id in the URL. Come back via the Stripe Payment Link after checkout.",
-    invalid: "Invalid session or payment not confirmed.",
-    unlocked: "Payment verified — download your pack.",
-    files: "Included files",
+      "We can't unlock your pack right now. Please try again in a few minutes. If the issue persists, contact support via GitHub.",
+    noSession:
+      "We couldn't find your order. Return from the checkout confirmation page, or check your Stripe receipt email.",
+    invalid: "Payment not confirmed or link expired. If you paid successfully, check your confirmation email or contact support.",
+    unlocked: "Payment confirmed",
+    files: "Download your pack",
     back: "← Back to landing",
     tip: "Tip: import the CSV into Notion, Google Sheets or Excel. Sort by age (days) descending.",
+    titleOk: "Thank you — your kit is ready.",
+    titlePending: "Payment confirmation",
   },
 };
 
@@ -68,6 +76,7 @@ export default function SuccessClient({ lang = "fr" }) {
   }, [sessionId]);
 
   const homeHref = lang === "en" ? "/en" : "/";
+  const isOk = state.status === "ok";
 
   const body = useMemo(() => {
     if (state.status === "loading") {
@@ -80,7 +89,6 @@ export default function SuccessClient({ lang = "fr" }) {
           <p className="lead" style={{ fontSize: "1rem" }}>
             {t.missingSecret}
           </p>
-          <p className="note mono">Vercel → Project → Settings → Environment Variables → STRIPE_SECRET_KEY = sk_test_…</p>
         </section>
       );
     }
@@ -111,9 +119,8 @@ export default function SuccessClient({ lang = "fr" }) {
               <a
                 href={`/api/download?file=${encodeURIComponent(f.key)}&session_id=${encodeURIComponent(sessionId)}`}
               >
-                <strong>{f.label}</strong>
-              </a>{" "}
-              <span className="mono">({f.key})</span>
+                {f.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -124,8 +131,11 @@ export default function SuccessClient({ lang = "fr" }) {
 
   return (
     <main className="wrap">
-      <span className="badge">{state.status === "ok" ? "✓ " : ""}{t.unlocked}</span>
-      <h1>{state.status === "ok" ? (lang === "en" ? "Thank you — your kit is ready." : "Merci — ton kit est prêt.") : lang === "en" ? "Payment confirmation" : "Confirmation de paiement"}</h1>
+      <span className="badge">
+        {isOk ? "✓ " : ""}
+        {isOk ? t.unlocked : t.badgePending}
+      </span>
+      <h1>{isOk ? t.titleOk : t.titlePending}</h1>
       {body}
       <Link className="cta cta-inline" href={homeHref} style={{ marginTop: 20 }}>
         {t.back}

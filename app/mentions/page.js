@@ -27,11 +27,11 @@ export default function MentionsPage() {
           paiement Stripe vérifié. Aucun envoi postal / physique.
         </p>
         <h2>Prix</h2>
-        <p>19 € TTC — paiement unique. Environnement Stripe <strong>TEST</strong> sur ce déploiement de démo.</p>
+        <p>19 € TTC — paiement unique via Stripe (carte bancaire).</p>
         <h2>Droit de rétractation</h2>
         <p>
           Conformément à l'art. L221-28 du Code de la consommation, le droit de rétractation ne s'applique
-          pas aux contenus numériques fournis immédiatement après accord explicite (accès au pack sur /succes).
+          pas aux contenus numériques fournis immédiatement après accord explicite (accès au pack après paiement).
         </p>
         <h2>Disclaimer (important)</h2>
         <p>

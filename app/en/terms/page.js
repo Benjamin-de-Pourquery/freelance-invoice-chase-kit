@@ -26,7 +26,7 @@ export default function TermsEnPage() {
           after verified Stripe payment. No physical shipping.
         </p>
         <h2>Price</h2>
-        <p>€19 one-time. This demo deployment uses Stripe <strong>TEST</strong> mode only.</p>
+        <p>€19 one-time payment via Stripe (card checkout).</p>
         <h2>Disclaimer</h2>
         <p>
           This pack is <strong>not legal, tax or accounting advice</strong>. Templates are practical

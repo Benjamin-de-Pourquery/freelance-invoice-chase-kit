@@ -46,9 +46,7 @@ export default function Landing({ t }) {
           <a className="cta" href={PAYMENT_LINK} rel="noopener noreferrer">
             {t.cta}
           </a>
-          <p className="note">
-            {t.testNote} <span className="mono">4242 4242 4242 4242</span>
-          </p>
+          <p className="note trust-note">{t.trustNote}</p>
           <p className="note">{t.delivery}</p>
         </aside>
       </div>

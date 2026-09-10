@@ -20,11 +20,10 @@ export default function PrivacyEnPage() {
           No user accounts. Payments are handled by <strong>Stripe</strong> (Payment Link / Checkout).
           Card data never hits our servers.
         </p>
-        <h2>Checkout session</h2>
+        <h2>Payment confirmation</h2>
         <p>
-          After payment, /succes receives a Stripe <code>session_id</code>. It is used only to verify
-          payment status via Stripe’s API (server-side with STRIPE_SECRET_KEY) and authorize pack
-          downloads.
+          After payment, a secure confirmation page verifies your purchase server-side before unlocking
+          pack downloads. Card data is processed entirely by Stripe.
         </p>
         <h2>Cookies &amp; analytics</h2>
         <p>
@@ -33,7 +32,7 @@ export default function PrivacyEnPage() {
         </p>
         <h2>Retention</h2>
         <p>
-          This MVP does not store an application database. Payment records remain with Stripe under
+          This site does not store an application database. Payment records remain with Stripe under
           their policy.
         </p>
         <h2>Your rights</h2>

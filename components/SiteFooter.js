@@ -9,7 +9,7 @@ export default function SiteFooter({ t }) {
         {" · "}
         <Link href={t.footerLinks.privacy}>{t.footerLinks.privacyLabel}</Link>
         {" · "}
-        Kit Relance Impayés · Stripe TEST · Nazruden
+        {t.footerBrand}
       </p>
     </footer>
   );
