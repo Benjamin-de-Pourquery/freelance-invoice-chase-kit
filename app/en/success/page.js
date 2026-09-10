@@ -2,15 +2,15 @@ import { Suspense } from "react";
 import SuccessClient from "@/components/SuccessClient";
 
 export const metadata = {
-  title: "Merci — Kit Relance Impayés",
-  description: "Télécharge ton pack après confirmation du paiement.",
+  title: "Thank you — Freelancer Overdue Invoice Kit",
+  description: "Download your pack after payment confirmation.",
   robots: { index: false, follow: false },
 };
 
-export default function SuccesPage() {
+export default function EnSuccessPage() {
   return (
     <Suspense fallback={<main className="wrap"><p className="lead">…</p></main>}>
-      <SuccessClient lang="fr" />
+      <SuccessClient lang="en" />
     </Suspense>
   );
 }

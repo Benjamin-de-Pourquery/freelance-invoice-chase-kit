@@ -21,11 +21,11 @@ export default function ConfidentialitePage() {
           <strong>Stripe</strong> (Payment Link / Checkout). Les données de carte ne transitent pas
           sur nos serveurs.
         </p>
-        <h2>Session Checkout</h2>
+        <h2>Confirmation de paiement</h2>
         <p>
-          Après paiement, l'URL /succes reçoit un <code>session_id</code> Stripe. Ce paramètre sert
-          uniquement à vérifier le statut de paiement via l'API Stripe (côté serveur, avec
-          STRIPE_SECRET_KEY) et à autoriser le téléchargement du pack.
+          Après paiement, une page de confirmation sécurisée vérifie ton achat côté serveur avant
+          d'autoriser le téléchargement du pack. Les données de carte sont traitées exclusivement par
+          Stripe.
         </p>
         <h2>Cookies &amp; analytics</h2>
         <p>
@@ -35,7 +35,7 @@ export default function ConfidentialitePage() {
         </p>
         <h2>Conservation</h2>
         <p>
-          Aucune base de données applicative n'est stockée par ce MVP. Les preuves de paiement restent
+          Aucune base de données applicative n'est stockée par ce site. Les preuves de paiement restent
           chez Stripe selon leur politique.
         </p>
         <h2>Vos droits</h2>
