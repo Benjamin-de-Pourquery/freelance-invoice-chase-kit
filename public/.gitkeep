@@ -1,0 +1,1 @@
+Pack files live in content/pack and are served only via /api/download after Stripe verification.

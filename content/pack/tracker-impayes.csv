@@ -1,0 +1,3 @@
+client,facture,montant_eur,date_emission,echeance,age_jours,statut,prochaine_action,date_prochaine_action,canal,notes
+Acme SAS,F-2026-014,1200,2026-07-01,2026-07-31,41,en_retard,email_j21,2026-09-11,email,Promesse verbale non tenue
+Studio Nord,F-2026-021,450,2026-08-10,2026-09-09,1,echeance_proche,rappel_j7,2026-09-16,email,
