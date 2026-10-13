@@ -51,7 +51,7 @@ Source : [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-fact
 - [ ] Je consulte le **statut** sur la plateforme avant d'envoyer un email de relance
 - [ ] Je vérifie le statut plateforme avant tout courrier formel
 
-Source statuts : [impots.gouv.fr (fiche statuts)](https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/fiches_reforme/fiche-3_v.pdf) ; cadre légal : [Légifrance, CGI ann. IV art. 41 septies G](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044131176)
+Source statuts : [impots.gouv.fr (fiche statuts)](https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/fiches_reforme/fiche-3_v.pdf) ; [Légifrance, ordonnance n° 2021-1190](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044131176), statuts obligatoires : art. 41 septies G ann. IV CGI
 
 ## Statuts facture électronique → piste de relance
 

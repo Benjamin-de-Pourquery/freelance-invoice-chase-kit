@@ -11,7 +11,7 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 ## Fonctionnalités (v1.2)
 
 - Landing bilingue **FR** (`/`) et **EN** (`/en`) + toggle
-- Pack riche dans `content/pack/` — **pas** servi en statique sous `/public`
+- Pack riche dans `content/pack/` : **pas** servi en statique sous `/public`
 - Page `/succes` : vérifie la Checkout Session Stripe (`session_id`) via API si `STRIPE_SECRET_KEY` est set
 - Downloads uniquement via `/api/download` après paiement vérifié
 - Mentions / Terms + Confidentialité / Privacy (FR + EN) + disclaimer
@@ -36,14 +36,14 @@ Success URL Stripe (déjà) :
 ## Test paiement (zéro live)
 
 1. Ouvre le Payment Link TEST
-2. Carte : `4242 4242 4242 4242` — date future — CVC quelconque
+2. Carte : `4242 4242 4242 4242`, date future, CVC quelconque
 3. Après redirect → `/succes?session_id=cs_test_…`
 4. Si `sk_test_` est configuré sur Vercel → téléchargements débloqués
 
 ## Stack
 
 - Next.js 14 (App Router)
-- Stripe Node SDK (vérification session uniquement — pas de PaymentIntent live)
+- Stripe Node SDK (vérification session uniquement, pas de PaymentIntent live)
 - Vercel
 
 ## Dev local
@@ -56,11 +56,11 @@ npm run dev
 
 ## Contenu du pack (`content/pack/`)
 
-- `emails-relance.md` — 15 templates + scripts WhatsApp/SMS
-- `courrier-mise-en-demeure.md` — modèle LRAR
-- `checklist.md` — avant envoi
-- `tracker-impayes.csv` — suivi créances
-- `guide.md` — usage 1 page
+- `emails-relance.md` : 15 templates + scripts WhatsApp/SMS
+- `courrier-mise-en-demeure.md` : modèle LRAR
+- `checklist.md` : avant envoi
+- `tracker-impayes.csv` : suivi créances
+- `guide.md` : usage 1 page
 - `facture-electronique-2026-checklist.md` / `e-invoicing-2026-checklist-en.md`
 - `relance-facture-electronique-emails.md` / `e-invoicing-chase-emails-en.md`
 

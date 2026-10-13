@@ -41,7 +41,7 @@ Merci,
 
 Bonjour [PRÉNOM],
 
-Je joins à nouveau la facture [FACTURE] au cas où elle se serait perdue. Montant : [MONTANT] € : échéance : [ÉCHÉANCE].
+Je joins à nouveau la facture [FACTURE] au cas où elle se serait perdue. Montant : [MONTANT] €, échéance : [ÉCHÉANCE].
 
 Merci de me confirmer la prise en charge.
 
@@ -184,7 +184,7 @@ Tu avais indiqué un paiement le [DATE] pour [FACTURE]. Peux-tu confirmer le nou
 ## 14. Relance courte (une phrase)
 **Objet :** [FACTURE] : [MONTANT] €
 
-Bonjour [PRÉNOM], petit rappel : facture [FACTURE] toujours ouverte. Tu confirmes une date ? [LIEN_PAIEMENT] : [TON_PRÉNOM]
+Bonjour [PRÉNOM], petit rappel : facture [FACTURE] toujours ouverte. Tu confirmes une date ? [LIEN_PAIEMENT] Merci, [TON_PRÉNOM]
 
 ---
 

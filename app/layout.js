@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "Kit Relance Impayés Freelance",
     description:
-      "Pack digital 19€ — emails, courrier, checklist, tracker. Pour freelances qui veulent encaisser.",
+      "Pack digital 19€ : emails, courrier, checklist, tracker. Pour freelances qui veulent encaisser.",
     locale: "fr_FR",
     type: "website",
   },

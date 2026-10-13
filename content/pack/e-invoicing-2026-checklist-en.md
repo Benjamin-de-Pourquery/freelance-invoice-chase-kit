@@ -51,7 +51,7 @@ Source: [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-factu
 - [ ] I check **status** on the platform before sending a payment reminder
 - [ ] I check the platform status before any formal letter
 
-Status sources: [impots.gouv.fr (status factsheet PDF)](https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/fiches_reforme/fiche-3_v.pdf) ; legal framework: [Légifrance, CGI ann. IV art. 41 septies G](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044131176)
+Status sources: [impots.gouv.fr (status factsheet PDF)](https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/fiches_reforme/fiche-3_v.pdf) ; [Légifrance, ordinance no. 2021-1190](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044131176), mandatory statuses: CGI ann. IV art. 41 septies G
 
 ## E-invoice status → possible next step
 

@@ -1,6 +1,6 @@
-# Courrier — Mise en demeure (modèle FR)
+# Courrier : mise en demeure (modèle FR)
 
-À envoyer de préférence en **lettre recommandée avec accusé de réception (LRAR)**.
+Envoi possible en LRAR (preuve de réception) ; vérifie selon ta situation.
 Ce modèle n'est pas un conseil juridique : fais-le relire si le montant / l'enjeu le justifie.
 
 ---
@@ -17,7 +17,7 @@ Ce modèle n'est pas un conseil juridique : fais-le relire si le montant / l'enj
 [NOM DU DÉBITEUR]  
 [ADRESSE]
 
-**Objet : Mise en demeure de payer — facture [FACTURE]**
+**Objet : Mise en demeure de payer : facture [FACTURE]**
 
 Madame, Monsieur,
 

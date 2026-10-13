@@ -35,7 +35,7 @@ export default function TermsEnPage() {
         <h2>Liability</h2>
         <p>No recovery-rate guarantee. Use of templates is at the buyer’s sole responsibility.</p>
         <h2>Hosting</h2>
-        <p>Vercel Inc. — Next.js application hosting.</p>
+        <p>Vercel Inc.: Next.js application hosting.</p>
       </section>
     </main>
   );
