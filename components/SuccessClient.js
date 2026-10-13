@@ -18,7 +18,7 @@ const LABELS = {
     files: "Télécharge ton pack",
     back: "← Retour à la landing",
     tip: "Astuce : importe le CSV dans Notion, Google Sheets ou Excel. Trie par âge (jours) décroissant.",
-    titleOk: "Merci — ton kit est prêt.",
+    titleOk: "Merci, ton kit est prêt.",
     titlePending: "Confirmation de paiement",
   },
   en: {
@@ -34,7 +34,7 @@ const LABELS = {
     files: "Download your pack",
     back: "← Back to landing",
     tip: "Tip: import the CSV into Notion, Google Sheets or Excel. Sort by age (days) descending.",
-    titleOk: "Thank you — your kit is ready.",
+    titleOk: "Thank you, your kit is ready.",
     titlePending: "Payment confirmation",
   },
 };

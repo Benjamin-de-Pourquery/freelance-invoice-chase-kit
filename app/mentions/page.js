@@ -27,7 +27,7 @@ export default function MentionsPage() {
           paiement Stripe vérifié. Aucun envoi postal / physique.
         </p>
         <h2>Prix</h2>
-        <p>19 € TTC — paiement unique via Stripe (carte bancaire).</p>
+        <p>19 € TTC, paiement unique via Stripe (carte bancaire).</p>
         <h2>Droit de rétractation</h2>
         <p>
           Conformément à l'art. L221-28 du Code de la consommation, le droit de rétractation ne s'applique
@@ -45,7 +45,7 @@ export default function MentionsPage() {
           responsabilité de l'acheteur.
         </p>
         <h2>Hébergement</h2>
-        <p>Vercel Inc. — déploiement applicatif Next.js.</p>
+        <p>Vercel Inc. : déploiement applicatif Next.js.</p>
       </section>
     </main>
   );
