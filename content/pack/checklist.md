@@ -26,3 +26,8 @@
 ## Suivi
 - [ ] Ligne créée / mise à jour dans le tracker CSV
 - [ ] `prochaine_action` + `date_prochaine_action` renseignées
+
+## Facture électronique (B2B France, si applicable)
+- [ ] Statut plateforme consulté (`statut_facture_electronique` dans le tracker)
+- [ ] Référence plateforme (`id_facture_plateforme`) citée si le client ne trouve pas la facture
+- [ ] Checklist dédiée parcourue : `facture-electronique-2026-checklist.md`

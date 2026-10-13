@@ -51,6 +51,45 @@ export default function Landing({ t }) {
         </aside>
       </div>
 
+      <section className="card e-invoicing-section" style={{ marginTop: 18 }}>
+        <h2>{t.eInvoicingTitle}</h2>
+        <p className="lead" style={{ fontSize: "1rem", margin: "0 0 16px" }}>
+          {t.eInvoicingLead}
+        </p>
+        <div className="e-invoicing-timeline">
+          {t.eInvoicingTimeline.map((item) => (
+            <div className="step" key={item.t}>
+              <strong>{item.t}</strong>
+              {item.d}{" "}
+              <a
+                className="source-link"
+                href={item.sourceUrl}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                ({item.sourceLabel})
+              </a>
+            </div>
+          ))}
+        </div>
+        <ul className="list" style={{ marginTop: 16 }}>
+          {t.eInvoicingPackBullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="note e-invoicing-disclaimer">{t.eInvoicingDisclaimer}</p>
+        <h3 className="e-invoicing-sources-heading">{t.eInvoicingSourcesTitle}</h3>
+        <ul className="source-list">
+          {t.eInvoicingSources.map((s) => (
+            <li key={s.url}>
+              <a href={s.url} rel="noopener noreferrer" target="_blank">
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="card" style={{ marginTop: 18 }}>
         <h2>{t.whyTitle}</h2>
         <p className="lead" style={{ fontSize: "1rem", margin: 0 }}>

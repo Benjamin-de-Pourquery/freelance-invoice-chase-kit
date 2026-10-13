@@ -8,7 +8,7 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 **Site :** https://kit-relance-impayes-freelance.vercel.app  
 **Repo :** https://github.com/Benjamin-de-Pourquery/freelance-invoice-chase-kit
 
-## Fonctionnalités (v1.1)
+## Fonctionnalités (v1.2)
 
 - Landing bilingue **FR** (`/`) et **EN** (`/en`) + toggle
 - Pack riche dans `content/pack/` — **pas** servi en statique sous `/public`
@@ -16,6 +16,7 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 - Downloads uniquement via `/api/download` après paiement vérifié
 - Mentions / Terms + Confidentialité / Privacy (FR + EN) + disclaimer
 - FAQ, UX mobile (CTA sticky), Payment Link configurable
+- Module **Facture électronique 2026** (FR + EN) : checklists, relances par statut plateforme, section landing avec sources officielles
 
 ## Variables d'environnement (Vercel)
 
@@ -60,6 +61,8 @@ npm run dev
 - `checklist.md` — avant envoi
 - `tracker-impayes.csv` — suivi créances
 - `guide.md` — usage 1 page
+- `facture-electronique-2026-checklist.md` / `e-invoicing-2026-checklist-en.md`
+- `relance-facture-electronique-emails.md` / `e-invoicing-chase-emails-en.md`
 
 ## Sécurité
 

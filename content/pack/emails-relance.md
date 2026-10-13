@@ -2,6 +2,8 @@
 
 Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_PAIEMENT], [TON_PRÉNOM], [SIRET], [DATE+5].
 
+**Facture électronique 2026 :** modèles 16 à 19 et tableau statuts → relance dans `relance-facture-electronique-emails.md` (voir aussi le tracker : colonnes `statut_facture_electronique`, `id_facture_plateforme`).
+
 ---
 
 ## 1. J+7 — Rappel doux
