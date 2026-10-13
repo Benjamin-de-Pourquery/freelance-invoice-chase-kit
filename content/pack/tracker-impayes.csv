@@ -1,4 +1,4 @@
 client,facture,montant_eur,date_emission,echeance,age_jours,statut,statut_facture_electronique,id_facture_plateforme,plateforme_agreee,prochaine_action,date_prochaine_action,canal,notes
 Acme SAS,F-2026-014,1200,2026-07-01,2026-07-31,41,en_retard,approuvee,PDP-ACME-2026-014,exemple_plateforme,email_j21,2026-09-11,email,Validée sur plateforme paiement en attente
 Studio Nord,F-2026-021,450,2026-08-10,2026-09-09,1,echeance_proche,deposee,PDP-SN-2026-021,exemple_plateforme,rappel_j7,2026-09-16,email,Déposée statut visible client à confirmer
-Beta SARL,F-2026-028,890,2026-08-20,2026-09-20,0,en_cours,en_cours_traitement,PDP-BETA-2026-028,exemple_plateforme,email_17,2026-09-18,email,Compta en traitement sur plateforme
+Beta SARL,F-2026-028,890,2026-08-20,2026-09-20,0,en_cours,recue,PDP-BETA-2026-028,exemple_plateforme,email_17,2026-09-18,email,Reçue côté client traitement compta en cours

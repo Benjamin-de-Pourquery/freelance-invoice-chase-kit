@@ -2,6 +2,8 @@
 
 Add-on to the main email pack. Replace [PLATFORM_ID], [PLATFORM_STATUS], [PLATFORM], [DEPOSIT_DATE].
 
+**Templates for information only, not legal advice.**
+
 ---
 
 ## 16. Deposited, not yet visible to client
@@ -20,7 +22,7 @@ Thanks,
 
 ---
 
-## 17. Status "processing" (accounting)
+## 17. Optional status "processing" (accounting)
 **Subject:** Invoice [FACTURE]: status [PLATFORM_STATUS] on [PLATFORM]
 
 Hi [PRÉNOM],
@@ -58,7 +60,7 @@ Hi [PRÉNOM],
 
 I see status "[PLATFORM_STATUS]" for [FACTURE] on [PLATFORM] (ref. [PLATFORM_ID]).
 
-Please tell me the reason and what is missing to fix it. I can correct and resubmit if needed.
+Please tell me the reason and what is missing to fix it. If refused, I will issue a new corrected invoice.
 
 [TON_PRÉNOM]
 
@@ -66,4 +68,4 @@ Please tell me the reason and what is missing to fix it. I can correct and resub
 
 ## Note
 
-Approved platforms expose invoice lifecycle statuses for tracking. General information: [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises). This is not legal or accounting advice.
+Approved platforms expose invoice lifecycle statuses for tracking. Mandatory statuses: deposited, rejected, refused, collected; others are optional and platform-dependent. General information: [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises). This is not legal or accounting advice.

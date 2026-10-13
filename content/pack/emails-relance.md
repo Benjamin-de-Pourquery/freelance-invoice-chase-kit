@@ -1,4 +1,4 @@
-# Templates emails de relance — Kit Relance Impayés
+# Templates emails de relance : Kit Relance Impayés
 
 Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_PAIEMENT], [TON_PRÉNOM], [SIRET], [DATE+5].
 
@@ -6,8 +6,8 @@ Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_P
 
 ---
 
-## 1. J+7 — Rappel doux
-**Objet :** Petite relance — facture [FACTURE]
+## 1. J+7 : Rappel doux
+**Objet :** Petite relance : facture [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -22,8 +22,8 @@ Merci d'avance,
 
 ---
 
-## 2. J+10 — Forward compta
-**Objet :** Facture [FACTURE] — pour votre service comptabilité
+## 2. J+10 : Forward compta
+**Objet :** Facture [FACTURE] : pour votre service comptabilité
 
 Bonjour [PRÉNOM],
 
@@ -36,12 +36,12 @@ Merci,
 
 ---
 
-## 3. J+12 — Renvoi pièce jointe
+## 3. J+12 : Renvoi pièce jointe
 **Objet :** Re: facture [FACTURE] (PDF en pièce jointe)
 
 Bonjour [PRÉNOM],
 
-Je joins à nouveau la facture [FACTURE] au cas où elle se serait perdue. Montant : [MONTANT] € — échéance : [ÉCHÉANCE].
+Je joins à nouveau la facture [FACTURE] au cas où elle se serait perdue. Montant : [MONTANT] € : échéance : [ÉCHÉANCE].
 
 Merci de me confirmer la prise en charge.
 
@@ -49,7 +49,7 @@ Merci de me confirmer la prise en charge.
 
 ---
 
-## 4. J+14 — Relance ferme
+## 4. J+14 : Relance ferme
 **Objet :** Facture [FACTURE] toujours en attente
 
 Bonjour [PRÉNOM],
@@ -65,8 +65,8 @@ Cordialement,
 
 ---
 
-## 5. J+16 — Proposition échéancier
-**Objet :** Facture [FACTURE] — option 2× possible
+## 5. J+16 : Proposition échéancier
+**Objet :** Facture [FACTURE] : option 2× possible
 
 Bonjour [PRÉNOM],
 
@@ -78,8 +78,8 @@ Sinon, règlement complet ici : [LIEN_PAIEMENT]
 
 ---
 
-## 6. J+18 — Pause livrables
-**Objet :** Pause des livrables — facture [FACTURE]
+## 6. J+18 : Pause livrables
+**Objet :** Pause des livrables : facture [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -92,8 +92,8 @@ Cordialement,
 
 ---
 
-## 7. J+21 — Escalade soft
-**Objet :** Action requise — facture [FACTURE]
+## 7. J+21 : Escalade soft
+**Objet :** Action requise : facture [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -105,8 +105,8 @@ Merci de régulariser ici : [LIEN_PAIEMENT]
 
 ---
 
-## 8. J+24 — Dernier rappel amiable
-**Objet :** Dernier rappel amiable — [FACTURE]
+## 8. J+24 : Dernier rappel amiable
+**Objet :** Dernier rappel amiable : [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -118,8 +118,8 @@ Dernier rappel amiable concernant [FACTURE] ([MONTANT] €). Sans retour sous 72
 
 ---
 
-## 9. J+30 — Mise en demeure soft (email)
-**Objet :** Mise en demeure — facture [FACTURE]
+## 9. J+30 : Mise en demeure soft (email)
+**Objet :** Mise en demeure : facture [FACTURE]
 
 Madame, Monsieur,
 
@@ -133,8 +133,8 @@ Cordialement,
 
 ---
 
-## 10. Fin de mois — clôture comptable
-**Objet :** Avant clôture — facture [FACTURE]
+## 10. Fin de mois : clôture comptable
+**Objet :** Avant clôture : facture [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -145,8 +145,8 @@ Merci,
 
 ---
 
-## 11. Grand compte — n° commande
-**Objet :** Facture [FACTURE] — n° de commande / service facturation
+## 11. Grand compte : n° commande
+**Objet :** Facture [FACTURE] : n° de commande / service facturation
 
 Bonjour [PRÉNOM],
 
@@ -156,7 +156,7 @@ Pour accélérer le traitement, merci d'indiquer le n° de commande / le contact
 
 ---
 
-## 12. AE → PME — rappel IBAN
+## 12. AE → PME : rappel IBAN
 **Objet :** IBAN + libellé pour facture [FACTURE]
 
 Bonjour [PRÉNOM],
@@ -169,7 +169,7 @@ Merci,
 ---
 
 ## 13. Promesse non tenue
-**Objet :** Suite à ta date du [DATE] — facture [FACTURE]
+**Objet :** Suite à ta date du [DATE] : facture [FACTURE]
 
 Bonjour [PRÉNOM],
 
@@ -182,14 +182,14 @@ Tu avais indiqué un paiement le [DATE] pour [FACTURE]. Peux-tu confirmer le nou
 ---
 
 ## 14. Relance courte (une phrase)
-**Objet :** [FACTURE] — [MONTANT] €
+**Objet :** [FACTURE] : [MONTANT] €
 
-Bonjour [PRÉNOM], petit rappel : facture [FACTURE] toujours ouverte. Tu confirmes une date ? [LIEN_PAIEMENT] — [TON_PRÉNOM]
+Bonjour [PRÉNOM], petit rappel : facture [FACTURE] toujours ouverte. Tu confirmes une date ? [LIEN_PAIEMENT] : [TON_PRÉNOM]
 
 ---
 
 ## 15. Closing positif
-**Objet :** Merci — paiement [FACTURE] bien reçu
+**Objet :** Merci : paiement [FACTURE] bien reçu
 
 Bonjour [PRÉNOM],
 

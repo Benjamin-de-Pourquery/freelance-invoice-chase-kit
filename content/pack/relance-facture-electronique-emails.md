@@ -2,6 +2,8 @@
 
 Complément à `emails-relance.md`. Remplace [ID_PLATEFORME], [STATUT_PLATEFORME], [PLATEFORME], [DATE_DEPOT].
 
+**Modèles indicatifs, pas un conseil juridique.**
+
 ---
 
 ## 16. Facture déposée, pas encore visible côté client
@@ -20,7 +22,7 @@ Merci,
 
 ---
 
-## 17. Statut « en cours de traitement » (compta)
+## 17. Statut facultatif « en traitement » (compta)
 **Objet :** Facture [FACTURE] : statut [STATUT_PLATEFORME] sur [PLATEFORME]
 
 Bonjour [PRÉNOM],
@@ -36,11 +38,11 @@ Peux-tu me donner une date de mise en paiement ou le contact compta qui suit ce 
 ---
 
 ## 18. Facture approuvée sur la plateforme, paiement en retard
-**Objet :** Paiement attendu : facture [FACTURE] (validée sur [PLATEFORME])
+**Objet :** Paiement attendu : facture [FACTURE] (approuvée sur [PLATEFORME])
 
 Bonjour [PRÉNOM],
 
-La facture [FACTURE] ([MONTANT] €) est validée sur [PLATEFORME] (réf. [ID_PLATEFORME]) mais le règlement n'est pas encore passé (échéance : [ÉCHÉANCE]).
+La facture [FACTURE] ([MONTANT] €) est approuvée sur [PLATEFORME] (réf. [ID_PLATEFORME]) mais le règlement n'est pas encore passé (échéance : [ÉCHÉANCE]).
 
 Merci de confirmer le virement sous 5 jours ouvrés ou une date ferme.
 
@@ -58,7 +60,7 @@ Bonjour [PRÉNOM],
 
 Je vois un statut « [STATUT_PLATEFORME] » pour [FACTURE] sur [PLATEFORME] (réf. [ID_PLATEFORME]).
 
-Peux-tu m'indiquer le motif et ce qu'il manque pour régulariser ? Je corrige et redépose si besoin.
+Peux-tu m'indiquer le motif et ce qu'il manque pour régulariser ? Si la facture est refusée, j'émets une nouvelle facture corrigée.
 
 [TON_PRÉNOM]
 
@@ -66,4 +68,4 @@ Peux-tu m'indiquer le motif et ce qu'il manque pour régulariser ? Je corrige et
 
 ## Rappel
 
-Les statuts affichés sur ta plateforme agréée servent au suivi du traitement (dépôt, réception, validation, litige, paiement). Source d'information générale : [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises). Ce document ne remplace pas un conseil juridique ou comptable.
+Les statuts affichés sur ta plateforme agréée servent au suivi du traitement (statuts obligatoires : déposée, rejetée, refusée, encaissée ; d'autres statuts facultatifs selon la plateforme, comme reçue, approuvée ou en litige). Source d'information générale : [economie.gouv.fr](https://www.economie.gouv.fr/tout-savoir-sur-la-facturation-electronique-pour-les-entreprises). Ce document ne remplace pas un conseil juridique ou comptable.
