@@ -150,6 +150,7 @@ export default function InvoiceChecker({ t, kitBrand }) {
       <span className="badge">{t.badge}</span>
       <h1>{t.title}</h1>
       <p className="lead">{t.lead}</p>
+      <p className="note">{t.exhaustiveListNote}</p>
 
       <section className="card checker-timeline-note" aria-labelledby="timeline-note-title">
         <h2 id="timeline-note-title">{t.timelineNoteTitle}</h2>
