@@ -9,7 +9,10 @@ import {
   buildChaseEmailText,
   calculateLatePaymentPenalties,
 } from "@/lib/late-payment-penalty/calculate";
-import { formatRateDetail } from "@/lib/late-payment-penalty/copy";
+import {
+  formatBreakdownLine,
+  formatRateDetail,
+} from "@/lib/late-payment-penalty/copy";
 
 function todayIso() {
   const d = new Date();
@@ -232,7 +235,27 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
                 </dd>
               </div>
             )}
-            {result.formula && result.annualRatePercent != null && (
+            {result.spansMultipleSemesters &&
+              result.interestBreakdown?.length > 0 && (
+                <div>
+                  <dt>{t.breakdownTitle}</dt>
+                  <dd>
+                    <ul className="source-list" style={{ margin: 0 }}>
+                      {result.interestBreakdown.map((row) => (
+                        <li key={row.semesterKey} className="mono" style={{ fontSize: "0.85rem" }}>
+                          {formatBreakdownLine(row, t.lang)}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="checker-result-hint" style={{ marginTop: 6 }}>
+                      {parsedAmount.toFixed(2)} × (taux / 100) × (jours / 365) par semestre
+                    </p>
+                  </dd>
+                </div>
+              )}
+            {result.formula &&
+              result.annualRatePercent != null &&
+              !result.spansMultipleSemesters && (
               <div>
                 <dt>{t.formulaLabel}</dt>
                 <dd className="mono" style={{ fontSize: "0.85rem" }}>
