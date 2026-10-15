@@ -3,6 +3,7 @@
 ## Preuves & dossier
 - [ ] Facture PDF originale accessible
 - [ ] CGV / conditions de paiement (délai, pénalités, indemnité forfaitaire)
+- [ ] Pénalités de retard estimées si besoin (outil gratuit : https://freelance-invoice-chase-kit.vercel.app/outil-penalites-retard)
 - [ ] Preuve d'envoi / de livraison / d'acceptation du devis
 - [ ] Historique des échanges déjà faits (dates)
 

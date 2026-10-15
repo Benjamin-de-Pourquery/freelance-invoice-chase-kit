@@ -18,6 +18,11 @@ export default function Landing({ t }) {
       <p className="lead">
         <span className="pain">{t.leadPain}</span> {t.lead}
       </p>
+      <p style={{ marginTop: 12 }}>
+        <a className="checker-tool-link" href={t.latePaymentToolHref}>
+          {t.latePaymentToolLabel} →
+        </a>
+      </p>
 
       <div className="grid grid-2">
         <section className="card">
