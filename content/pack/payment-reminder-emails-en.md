@@ -158,7 +158,7 @@ To speed processing, please share the PO number or billing contact for invoice [
 
 ---
 
-## 12: Bank details reminder
+## 12. Bank details reminder
 **Subject:** Bank details + payment reference for [INVOICE]
 
 Hi [FIRST_NAME],

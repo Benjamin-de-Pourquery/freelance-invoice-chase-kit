@@ -2,6 +2,8 @@
 
 Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_PAIEMENT], [TON_PRÉNOM], [SIRET], [DATE+5].
 
+**Modèles à titre informatif, ce n'est pas un conseil juridique.** Pénalités de retard et indemnité de 40 € : uniquement entre professionnels (fiche service-public F23211).
+
 **Facture électronique 2026 :** modèles 16 à 19 et tableau statuts → relance dans `relance-facture-electronique-emails.md` (voir aussi le tracker : colonnes `statut_facture_electronique`, `id_facture_plateforme`).
 
 ---

@@ -8,7 +8,7 @@ Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_P
 
 ## Notes d'usage
 
-- **WhatsApp** : pratique si vous avez déjà échangé avec le client sur ce canal. Gardez un ton professionnel, évitez les menaces ou formulations pouvant être illégales (harcellement, diffamation, fausses sanctions).
+- **WhatsApp** : pratique si vous avez déjà échangé avec le client sur ce canal. Gardez un ton professionnel, évitez les menaces ou formulations pouvant être illégales (harcèlement, diffamation, fausses sanctions).
 - **SMS** : utile pour un rappel court quand l'email reste sans réponse. Une phrase claire suffit. Pas de spam répété.
 - Envoyez après au moins un email de relance documenté (voir `emails-relance.md`).
 - Ne promettez pas d'actions que vous n'entendez pas mener. Les mentions de mise en demeure doivent refléter votre processus réel.
@@ -49,11 +49,11 @@ Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_P
 
 2. [PRÉNOM], dernier rappel amiable sur [FACTURE] ([MONTANT] €). Sans retour sous 48h, je passe à une relance formelle par courrier ou email officiel.
 
-3. Bonjour [PRÉNOM], [FACTURE] ([MONTANT] €) est en retard depuis le [ÉCHÉANCE]. Je suspend les accès / livrables jusqu'au paiement. Confirme-moi le virement : [LIEN_PAIEMENT]
+3. Bonjour [PRÉNOM], [FACTURE] ([MONTANT] €) est en retard depuis le [ÉCHÉANCE]. Je suspends les accès / livrables jusqu'au paiement. Confirme-moi le virement : [LIEN_PAIEMENT]
 
 4. [PRÉNOM], tu avais indiqué un paiement le [DATE] pour [FACTURE]. Peux-tu confirmer aujourd'hui ? Sinon je dois escalader en interne.
 
-5. Bonjour [PRÉNOM], action requise sur [FACTURE] ([MONTANT] €). Merci de régulariser avant [DATE]. Les intérêts de retard et frais de recouvrement prévus au contrat pourront s'appliquer si la loi le permet.
+5. Bonjour [PRÉNOM], action requise sur [FACTURE] ([MONTANT] €). Merci de régulariser avant [DATE]. Les intérêts de retard et frais de recouvrement prévus au contrat pourront s'appliquer si la loi le permet (entre professionnels).
 
 ---
 
