@@ -2,6 +2,8 @@
 
 Usage personnel. Remplace [PRÉNOM], [FACTURE], [MONTANT], [ÉCHÉANCE], [LIEN_PAIEMENT], [TON_PRÉNOM], [SIRET], [DATE+5].
 
+**Modèles à titre informatif, ce n'est pas un conseil juridique.** Pénalités de retard et indemnité de 40 € : uniquement entre professionnels (fiche service-public F23211).
+
 **Facture électronique 2026 :** modèles 16 à 19 et tableau statuts → relance dans `relance-facture-electronique-emails.md` (voir aussi le tracker : colonnes `statut_facture_electronique`, `id_facture_plateforme`).
 
 ---
@@ -200,6 +202,5 @@ Merci, paiement bien reçu pour [FACTURE]. Content de continuer ensemble.
 ---
 
 ## Scripts WhatsApp / SMS
-1. **Soft :** Salut [PRÉNOM], petit rappel facture [FACTURE] ([MONTANT] €). Tu peux me dire quand c'est prévu ?
-2. **Ferme :** [PRÉNOM], facture [FACTURE] toujours ouverte. Besoin d'une date de virement cette semaine.
-3. **Urgent :** Sans nouvelles sous 48h sur [FACTURE], je passe en relance formelle. Merci de prioriser.
+
+Modèles dédiés (3 niveaux : doux / ferme / urgent, plusieurs variantes par niveau) : **`whatsapp-sms-scripts-fr.md`**. Version anglaise : **`whatsapp-sms-scripts-en.md`**.
