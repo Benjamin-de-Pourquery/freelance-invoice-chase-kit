@@ -2,6 +2,8 @@
 
 **General information only, not legal advice.** Always check official texts and adapt to your situation.
 
+Free browser tool (no data sent): [Check your invoice mentions](https://freelance-invoice-chase-kit.vercel.app/en/invoice-checker)
+
 ## Timeline (summary)
 
 | Date | Who | What |

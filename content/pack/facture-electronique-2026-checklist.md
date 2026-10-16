@@ -2,6 +2,8 @@
 
 **Information générale (pas un conseil juridique).** Vérifie toujours les textes officiels et adapte à ta situation.
 
+Outil gratuit (navigateur, sans envoi de données) : [Vérifier les mentions de ta facture](https://freelance-invoice-chase-kit.vercel.app/outil-verification-facture)
+
 ## Calendrier (résumé)
 
 | Échéance | Qui | Quoi |
