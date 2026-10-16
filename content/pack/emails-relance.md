@@ -200,6 +200,5 @@ Merci, paiement bien reçu pour [FACTURE]. Content de continuer ensemble.
 ---
 
 ## Scripts WhatsApp / SMS
-1. **Soft :** Salut [PRÉNOM], petit rappel facture [FACTURE] ([MONTANT] €). Tu peux me dire quand c'est prévu ?
-2. **Ferme :** [PRÉNOM], facture [FACTURE] toujours ouverte. Besoin d'une date de virement cette semaine.
-3. **Urgent :** Sans nouvelles sous 48h sur [FACTURE], je passe en relance formelle. Merci de prioriser.
+
+Modèles dédiés (3 niveaux : doux / ferme / urgent, plusieurs variantes par niveau) : **`whatsapp-sms-scripts-fr.md`**. Version anglaise : **`whatsapp-sms-scripts-en.md`**.
