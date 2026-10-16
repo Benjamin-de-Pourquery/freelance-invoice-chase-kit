@@ -42,6 +42,7 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
   const [calcDate, setCalcDate] = useState(() => todayIso());
   const [contractualRate, setContractualRate] = useState("");
   const [debtorType, setDebtorType] = useState("professional");
+  const [formalNoticeDate, setFormalNoticeDate] = useState("");
   const [copied, setCopied] = useState(false);
 
   const parsedAmount = parseFloat(amountTtc.replace(",", ".")) || 0;
@@ -58,8 +59,9 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
         calcDate,
         contractualRatePercent: contractualParsed,
         debtorType,
+        formalNoticeDate: debtorType === "private" ? formalNoticeDate : null,
       }),
-    [parsedAmount, dueDate, calcDate, contractualParsed, debtorType]
+    [parsedAmount, dueDate, calcDate, contractualParsed, debtorType, formalNoticeDate]
   );
 
   const chaseText = useMemo(
@@ -193,6 +195,22 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
               </OptionCard>
             ))}
           </div>
+
+          {debtorType === "private" && (
+            <>
+              <label className="checker-field-label" htmlFor="formal-notice-date">
+                {t.formalNoticeLabel}
+              </label>
+              <input
+                id="formal-notice-date"
+                className="checker-date"
+                type="date"
+                value={formalNoticeDate}
+                onChange={(e) => setFormalNoticeDate(e.target.value)}
+              />
+              <p className="note" style={{ marginTop: 6 }}>{t.formalNoticeHint}</p>
+            </>
+          )}
         </section>
 
         <section className="card" aria-labelledby="penalty-results">
@@ -205,6 +223,10 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
               </p>
               <p className="checker-result-hint">{t.noPenaltiesBody}</p>
             </div>
+          ) : result.rateReason === "formal_notice_required" ? (
+            <p className="checker-result-hint">
+              {t.rateReasons.formal_notice_required}
+            </p>
           ) : result.rateReason === "unavailable" ? (
             <p className="note" style={{ color: "var(--warn)" }}>
               {t.rateReasons.unavailable}
@@ -260,7 +282,7 @@ export default function LatePaymentCalculator({ t, kitBrand }) {
                 <dt>{t.formulaLabel}</dt>
                 <dd className="mono" style={{ fontSize: "0.85rem" }}>
                   {parsedAmount.toFixed(2)} × ({result.annualRatePercent.toFixed(2)} / 100) × (
-                  {result.daysLate} / 365) = {result.interestEur.toFixed(2)} €
+                  {result.interestDays} / 365) = {result.interestEur.toFixed(2)} €
                 </dd>
               </div>
             )}
