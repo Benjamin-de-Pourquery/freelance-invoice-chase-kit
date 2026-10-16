@@ -17,6 +17,7 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 - Mentions / Terms + Confidentialité / Privacy (FR + EN) + disclaimer
 - FAQ, UX mobile (CTA sticky), Payment Link configurable
 - Module **Facture électronique 2026** (FR + EN) : checklists, relances par statut plateforme, section landing avec sources officielles
+- **Invoice mention checker** (free lead magnet, client-side): `/outil-verification-facture` (FR) and `/en/invoice-checker` (EN). Logic in `lib/invoice-checker/` with `npm test`.
 
 ## Variables d'environnement (Vercel)
 

@@ -82,6 +82,11 @@ export default function Landing({ t }) {
             <li key={item}>{item}</li>
           ))}
         </ul>
+        <p style={{ marginTop: 16 }}>
+          <a className="checker-tool-link" href={t.eInvoicingToolHref}>
+            {t.eInvoicingToolLabel} →
+          </a>
+        </p>
         <p className="note e-invoicing-disclaimer">{t.eInvoicingDisclaimer}</p>
         <h3 className="e-invoicing-sources-heading">{t.eInvoicingSourcesTitle}</h3>
         <ul className="source-list">
