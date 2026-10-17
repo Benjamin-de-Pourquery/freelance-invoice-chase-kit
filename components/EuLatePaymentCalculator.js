@@ -304,9 +304,21 @@ export default function EuLatePaymentCalculator({ t, kitBrand }) {
             <p className="checker-result-hint">
               {t.rateReasons.consumer_not_applicable}
             </p>
+          ) : result.needsPolandContractualRate ? (
+            <p className="checker-result-hint">
+              {t.rateReasons.poland_needs_contractual_rate}
+            </p>
           ) : null}
 
-          {result.needsOutsidePeriodRate && !result.consumerNotApplicable && (
+          {result.needsPolandContractualRate && !result.consumerNotApplicable && (
+            <p className="note" style={{ color: "var(--warn)" }}>
+              {t.polandBusinessHint}
+            </p>
+          )}
+
+          {result.needsOutsidePeriodRate &&
+            !result.consumerNotApplicable &&
+            !result.needsPolandContractualRate && (
             <p className="note" style={{ color: "var(--warn)" }}>
               {t.warningOutsidePeriod}
             </p>
