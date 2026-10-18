@@ -451,7 +451,7 @@ export default function UsFreelancePaymentChecker({ t, kitBrand }) {
                       ? hasWrittenContract
                         ? t.writtenContractRequired
                         : t.writtenContractMissing
-                      : "N/A"}
+                      : t.writtenContractNotRequired}
                   </dd>
                 </div>
               </dl>
