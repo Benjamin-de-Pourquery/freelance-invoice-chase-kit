@@ -19,6 +19,7 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 - Module **Facture électronique 2026** (FR + EN) : checklists, relances par statut plateforme, section landing avec sources officielles
 - **Invoice mention checker** (free lead magnet, client-side): `/outil-verification-facture` (FR) and `/en/invoice-checker` (EN). Logic in `lib/invoice-checker/` with `npm test`.
 - **EU late-payment interest calculator** (free lead magnet, client-side): `/outil-interets-retard-ue` (FR) and `/en/eu-late-payment-calculator` (EN). Your Europe H2 2026 rates in `lib/eu-late-payment/`.
+- **US freelance payment law checker** (free lead magnet, client-side): `/outil-loi-paiement-freelance-us` (FR) and `/en/us-freelance-payment-checker` (EN). Logic in `lib/us-freelance-payment/`.
 
 ## Variables d'environnement (Vercel)
 
