@@ -61,6 +61,23 @@ export default function Landing({ t }) {
         </aside>
       </div>
 
+      {t.usEditionTitle ? (
+        <section className="card us-edition-section" style={{ marginTop: 18 }}>
+          <h2>{t.usEditionTitle}</h2>
+          <p className="lead" style={{ fontSize: "1rem", margin: "0 0 16px" }}>
+            {t.usEditionLead}
+          </p>
+          <ul className="list">
+            {t.usEditionBullets.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="note e-invoicing-disclaimer" style={{ marginTop: 16 }}>
+            {t.usEditionDisclaimer}
+          </p>
+        </section>
+      ) : null}
+
       <section className="card e-invoicing-section" style={{ marginTop: 18 }}>
         <h2>{t.eInvoicingTitle}</h2>
         <p className="lead" style={{ fontSize: "1rem", margin: "0 0 16px" }}>
