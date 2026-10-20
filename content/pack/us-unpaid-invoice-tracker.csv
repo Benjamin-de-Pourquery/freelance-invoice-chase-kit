@@ -1,0 +1,5 @@
+client,invoice_number,amount_usd,issue_date,due_date,days_overdue,state_or_city,law_possibly_applicable,last_contact_date,last_contact_channel,next_action,next_action_date,status,notes
+Acme Media LLC,INV-2026-104,2400.00,2026-08-01,2026-08-31,19,New York NY,NYS Freelance Isn't Free Act (GBL Art. 44-A),2026-09-12,email,D+30 email (section 5) from us-chase-emails.md,2026-09-19,overdue,Client asked for W-9 resent
+Bright Studio,INV-2026-118,750.00,2026-09-05,2026-09-20,0,California CA,CA Freelance Worker Protection Act (BPC 18100-18107),2026-09-18,slack,Due date nudge,2026-09-20,due_soon,Written contract on file
+Loop Chicago Inc,INV-2026-122,1100.00,2026-07-15,2026-08-14,36,Illinois IL,IL Freelance Worker Protection Act (820 ILCS 193),2026-09-10,email,Final notice email section 6,2026-09-22,overdue,AP ticket #4482 open
+NYC Brand Co,INV-2026-099,3200.00,2026-06-20,2026-07-20,61,New York City NY,NYC Freelance Isn't Free Act (Admin Code T20 Ch10),2026-09-01,email,Prepare us-final-demand-letter.md,2026-09-25,escalation,No response after D+30 email

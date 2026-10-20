@@ -51,6 +51,23 @@ for (const { file, markers } of intensityChecks) {
   }
 }
 
+const usEditionFiles = [
+  "us-chase-emails.md",
+  "us-final-demand-letter.md",
+  "us-written-contract-checklist.md",
+  "us-unpaid-invoice-tracker.csv",
+  "us-edition-guide.md",
+];
+
+for (const filename of usEditionFiles) {
+  assert.ok(packKeys.includes(filename), `US Edition pack file missing from PACK_FILES: ${filename}`);
+  const text = fs.readFileSync(path.join(packDir, filename), "utf8");
+  assert.ok(
+    !/[\u2013\u2014]/.test(text),
+    `${filename} must not contain en dash or em dash in user-facing copy`
+  );
+}
+
 console.log(
-  `check-pack: OK (${packKeys.length} files, WhatsApp/SMS intensity markers verified)`
+  `check-pack: OK (${packKeys.length} files, WhatsApp/SMS intensity markers verified, US Edition registered)`
 );

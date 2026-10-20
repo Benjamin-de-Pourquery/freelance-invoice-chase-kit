@@ -8,9 +8,10 @@ Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courr
 **Site :** https://kit-relance-impayes-freelance.vercel.app  
 **Repo :** https://github.com/Benjamin-de-Pourquery/freelance-invoice-chase-kit
 
-## Fonctionnalités (v1.2)
+## Fonctionnalités (v1.4)
 
 - Landing bilingue **FR** (`/`) et **EN** (`/en`) + toggle
+- **US Edition** (EN, USD) dans le pack : relances, lettre finale, checklist contrats écrits (NY État, NYC, IL, CA), tracker CSV
 - Pack riche dans `content/pack/` : **pas** servi en statique sous `/public`
 - Page `/succes` : vérifie la Checkout Session Stripe (`session_id`) via API si `STRIPE_SECRET_KEY` est set
 - Downloads uniquement via `/api/download` après paiement vérifié
@@ -66,6 +67,7 @@ npm run dev
 - `guide.md` : usage 1 page
 - `facture-electronique-2026-checklist.md` / `e-invoicing-2026-checklist-en.md`
 - `relance-facture-electronique-emails.md` / `e-invoicing-chase-emails-en.md`
+- **US Edition (EN)** : `us-chase-emails.md`, `us-final-demand-letter.md`, `us-written-contract-checklist.md`, `us-unpaid-invoice-tracker.csv`, `us-edition-guide.md`
 
 ## Sécurité
 
