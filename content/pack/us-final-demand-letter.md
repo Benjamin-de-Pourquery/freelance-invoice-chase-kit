@@ -65,7 +65,7 @@ Sincerely,
 
 | Jurisdiction | Law (short name) | Example agency / source |
 |--------------|------------------|-------------------------|
-| New York State | Freelance Isn't Free Act (GBL Art. 44-A) | NYS Attorney General: https://ag.ny.gov/freelance-workers |
+| New York State | Freelance Isn't Free Act (GBL Art. 44-A) | NYS Attorney General: https://ag.ny.gov/resources/individuals/workers-rights |
 | New York City | Freelance Isn't Free Act (Admin. Code Title 20, Ch. 10) | NYC DCWP: https://www.nyc.gov/site/dca/workers/workersrights/freelancer-workers.page |
 | Illinois | Freelance Worker Protection Act (820 ILCS 193) | IL Dept. of Labor: https://labor.illinois.gov/laws-rules/legal/freelance-worker-protection-act.html |
 | California | Freelance Worker Protection Act (BPC §§ 18100-18107) | Statute: https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=BPC&division=7.&part=5. |

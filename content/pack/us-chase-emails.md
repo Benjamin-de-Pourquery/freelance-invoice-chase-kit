@@ -80,7 +80,7 @@ Hi [FIRST_NAME],
 
 Invoice [INVOICE] for $[AMOUNT_USD] USD is now 30 days past due ([DUE_DATE]).
 
-Without payment or a written payment plan by [DATE_PLUS_14], I will send a final written demand and consider lawful next steps allowed under our agreement and applicable law (such as filing a complaint with [AGENCY_NAME] or pursuing payment in small claims court, where available).
+Without payment or a written payment plan by [DATE_PLUS_14], I will send a final written demand and consider lawful next steps allowed under our agreement and applicable law (such as filing a complaint with [AGENCY_NAME] if one handles my type of claim, or pursuing payment in small claims court, where available).
 
 [PAYMENT_LINK]
 

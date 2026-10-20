@@ -36,18 +36,18 @@ Published by Glint.
 - [ ] **Date** by which the freelance worker must submit a **list of services rendered** (if needed for the hiring party's internal processing deadlines)
 - [ ] Each party receives a **copy** of the written contract (physical or electronic)
 
-**Enforcement (general):** Complaints may be filed with the **New York State Attorney General** (see https://ag.ny.gov/freelance-workers).
+**Enforcement (general):** Complaints may be filed with the **New York State Attorney General** (see https://ag.ny.gov/resources/individuals/workers-rights).
 
 ---
 
 ## New York City: Administrative Code Title 20, Chapter 10 (Freelance Isn't Free Act)
 
-**When a written contract may be required:** Contract between a hiring party and freelance worker with value **$800 or more**, alone or **aggregated** over the **immediately preceding 120 days**.
+**When a written contract may be required:** Contract between a hiring party and freelance worker with value **$800 or more**, alone or **aggregated** over the **immediately preceding 120 days**. This **$800 threshold applies only to the written-contract requirement**. Timely payment rules under Admin. Code **20-929** apply to covered freelance work **with no dollar threshold**.
 
 **Official sources:**
 - Worker rights summary (written contract, timely payment): https://www.nyc.gov/site/dca/workers/workersrights/freelancer-workers.page
 - FAQ (required terms, 30-day default payment): https://www.nyc.gov/assets/dca/downloads/pdf/workers/FAQs-Freelance.pdf
-- Local Law 140 (2016) text: https://intro.nyc/local-laws/2016-140
+- Local Law 140 (2016) text: https://www.nyc.gov/assets/dca/downloads/pdf/about/Freelance-Law.pdf
 
 **Minimum contents to include (check each):**
 - [ ] Name and **mailing address** of hiring party and freelance worker
@@ -105,7 +105,7 @@ Published by Glint.
 | Jurisdiction | Threshold (USD) | 120-day aggregation | Default max days to pay if contract silent |
 |--------------|-----------------|---------------------|---------------------------------------------|
 | New York State | $800 | Yes | 30 days after completion (GBL § 1411) |
-| New York City | $800 | Yes | 30 days after completion (NYC FAQ) |
+| New York City | $800 (written contract only; payment under Admin. Code 20-929 has no threshold) | Yes | 30 days after completion (NYC FAQ) |
 | Illinois | $500 | Yes | 30 days after completion (820 ILCS 193/10) |
 | California | $250 | Yes | 30 days after completion (BPC § 18102) |
 
