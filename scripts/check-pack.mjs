@@ -68,6 +68,23 @@ for (const filename of usEditionFiles) {
   );
 }
 
+const ukEditionFiles = [
+  "uk-chase-emails.md",
+  "uk-letter-before-action.md",
+  "uk-unpaid-invoice-tracker.csv",
+  "uk-edition-guide.md",
+  "uk-edition-guide-fr.md",
+];
+
+for (const filename of ukEditionFiles) {
+  assert.ok(packKeys.includes(filename), `UK Edition pack file missing from PACK_FILES: ${filename}`);
+  const text = fs.readFileSync(path.join(packDir, filename), "utf8");
+  assert.ok(
+    !/[\u2013\u2014]/.test(text),
+    `${filename} must not contain en dash or em dash in user-facing copy`
+  );
+}
+
 console.log(
-  `check-pack: OK (${packKeys.length} files, WhatsApp/SMS intensity markers verified, US Edition registered)`
+  `check-pack: OK (${packKeys.length} files, WhatsApp/SMS intensity markers verified, US and UK Editions registered)`
 );
