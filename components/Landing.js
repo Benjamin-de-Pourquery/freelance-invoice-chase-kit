@@ -33,6 +33,11 @@ export default function Landing({ t }) {
           {t.usFreelanceToolLabel} →
         </a>
       </p>
+      <p style={{ marginTop: 8 }}>
+        <a className="checker-tool-link" href={t.ukLatePaymentToolHref}>
+          {t.ukLatePaymentToolLabel} →
+        </a>
+      </p>
 
       <div className="grid grid-2">
         <section className="card">

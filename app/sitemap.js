@@ -12,6 +12,8 @@ export default function sitemap() {
     "/en/eu-late-payment-calculator",
     "/outil-loi-paiement-freelance-us",
     "/en/us-freelance-payment-checker",
+    "/outil-interets-retard-uk",
+    "/en/uk-late-payment-calculator",
     "/mentions",
     "/confidentialite",
     "/en/terms",

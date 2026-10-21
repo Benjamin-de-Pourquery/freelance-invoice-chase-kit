@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "node --test lib/invoice-checker/evaluate.test.js lib/late-payment-penalty/calculate.test.js lib/eu-late-payment/calculate.test.js lib/us-freelance-payment/calculate.test.js && node scripts/check-pack.mjs"
+    "test": "node --test lib/invoice-checker/evaluate.test.js lib/late-payment-penalty/calculate.test.js lib/eu-late-payment/calculate.test.js lib/us-freelance-payment/calculate.test.js lib/uk-late-payment/calculate.test.js && node scripts/check-pack.mjs"
   },
   "dependencies": {
     "next": "14.2.5",
