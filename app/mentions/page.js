@@ -17,7 +17,8 @@ export default function MentionsPage() {
       <section className="card">
         <h2>Éditeur</h2>
         <p>
-          Produit digital proposé par <strong>Glint</strong>.
+          Produit digital proposé par <strong>Glint</strong>. Contact :{" "}
+          <a href="mailto:glintapps@proton.me">glintapps@proton.me</a>.
         </p>
         <h2>Nature du produit</h2>
         <p>

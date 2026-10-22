@@ -16,7 +16,10 @@ export default function TermsEnPage() {
       <h1>Terms &amp; conditions</h1>
       <section className="card">
         <h2>Publisher</h2>
-        <p>Digital product by <strong>Glint</strong>.</p>
+        <p>
+          Digital product by <strong>Glint</strong>. Contact:{" "}
+          <a href="mailto:glintapps@proton.me">glintapps@proton.me</a>.
+        </p>
         <h2>Product</h2>
         <p>
           Digital pack of templates (emails, formal letter, checklist, CSV tracker). Instant access
