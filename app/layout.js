@@ -1,13 +1,13 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Kit Relance Impayés Freelance — 19€",
+  title: "Kit Relance Impayés Freelance",
   description:
-    "Emails, courrier, checklist et tracker CSV pour freelances. Se faire payer sans se battre. Pack digital immédiat.",
+    "Emails, courrier, checklist et tracker CSV pour freelances. Paiement en EUR, USD ou GBP. Pack digital immédiat.",
   openGraph: {
     title: "Kit Relance Impayés Freelance",
     description:
-      "Pack digital 19€ : emails, courrier, checklist, tracker. Pour freelances qui veulent encaisser.",
+      "Pack digital : emails, courrier, checklist, tracker. Paiement en EUR, USD ou GBP.",
     locale: "fr_FR",
     type: "website",
   },

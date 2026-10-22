@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
 import SiteFooter from "@/components/SiteFooter";
-import { PAYMENT_LINK } from "@/lib/i18n";
+import PackCheckoutButton from "@/components/PackCheckoutButton";
 import {
   evaluateInvoiceMentions,
   summarizeResults,
@@ -330,9 +330,12 @@ export default function InvoiceChecker({ t, kitBrand }) {
       <aside className="card checker-cta">
         <h2>{t.ctaTitle}</h2>
         <p className="note" style={{ marginTop: 0 }}>{t.ctaBody}</p>
-        <a className="cta cta-inline" href={PAYMENT_LINK} rel="noopener noreferrer">
-          {t.ctaButton}
-        </a>
+        <PackCheckoutButton
+          lang={t.lang === "en" ? "en" : "fr"}
+          ctaLabel={t.ctaButton}
+          className="cta cta-inline"
+          compactSelector={true}
+        />
       </aside>
 
       <SiteFooter t={footerT} />

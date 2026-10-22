@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
 import SiteFooter from "@/components/SiteFooter";
-import { PAYMENT_LINK } from "@/lib/i18n";
+import PackCheckoutButton from "@/components/PackCheckoutButton";
 import {
   buildUkChaseEmailText,
   calculateUkLatePayment,
@@ -404,9 +404,13 @@ export default function UkLatePaymentCalculator({ t, kitBrand }) {
       <section className="card checker-cta" style={{ marginTop: 18 }}>
         <h2>{t.kitCtaTitle}</h2>
         <p className="note" style={{ marginTop: 0 }}>{t.kitCtaBody}</p>
-        <a className="cta cta-inline" href={PAYMENT_LINK} rel="noopener noreferrer">
-          {t.kitCtaBtn}
-        </a>
+        <PackCheckoutButton
+          lang={t.lang === "en" ? "en" : "fr"}
+          preferGbp={true}
+          ctaLabel={t.kitCtaBtn}
+          className="cta cta-inline"
+          compactSelector={true}
+        />
       </section>
 
       <SiteFooter t={footerT} />

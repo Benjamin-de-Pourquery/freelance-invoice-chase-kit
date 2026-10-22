@@ -3,63 +3,90 @@
 > **Canonical repo (EN naming):** https://github.com/Benjamin-de-Pourquery/freelance-invoice-chase-kit  
 > Mirrored from Nazruden/kit-relance-impayes-freelance @ 3b7543cb (product v1.1).
 
-Pack digital **19 €** (Stripe TEST) pour freelances : templates emails / courrier, checklist, tracker CSV.
+Digital pack for freelancers: email and letter templates, checklist, CSV tracker.
 
-**Site :** https://kit-relance-impayes-freelance.vercel.app  
-**Repo :** https://github.com/Benjamin-de-Pourquery/freelance-invoice-chase-kit
+**Site:** https://kit-relance-impayes-freelance.vercel.app  
+**Repo:** https://github.com/Benjamin-de-Pourquery/freelance-invoice-chase-kit
 
-## Fonctionnalités (v1.4)
+## Features (v1.5)
 
-- Landing bilingue **FR** (`/`) et **EN** (`/en`) + toggle
-- **US Edition** (EN, USD) dans le pack : relances, lettre finale, checklist contrats écrits (NY État, NYC, IL, CA), tracker CSV
-- **UK Edition** (EN, GBP) dans le pack : relances B2B, lettre avant action, tracker CSV, guide intérêts légaux (1998 Act)
-- Pack riche dans `content/pack/` : **pas** servi en statique sous `/public`
-- Page `/succes` : vérifie la Checkout Session Stripe (`session_id`) via API si `STRIPE_SECRET_KEY` est set
-- Downloads uniquement via `/api/download` après paiement vérifié
-- Mentions / Terms + Confidentialité / Privacy (FR + EN) + disclaimer
-- FAQ, UX mobile (CTA sticky), Payment Link configurable
-- Module **Facture électronique 2026** (FR + EN) : checklists, relances par statut plateforme, section landing avec sources officielles
-- **Invoice mention checker** (free lead magnet, client-side): `/outil-verification-facture` (FR) and `/en/invoice-checker` (EN). Logic in `lib/invoice-checker/` with `npm test`.
-- **EU late-payment interest calculator** (free lead magnet, client-side): `/outil-interets-retard-ue` (FR) and `/en/eu-late-payment-calculator` (EN). Your Europe H2 2026 rates in `lib/eu-late-payment/`.
-- **US freelance payment law checker** (free lead magnet, client-side): `/outil-loi-paiement-freelance-us` (FR) and `/en/us-freelance-payment-checker` (EN). Logic in `lib/us-freelance-payment/`.
+- Bilingual landing **FR** (`/`) and **EN** (`/en`) + language toggle
+- **Multi-currency checkout** (EUR, USD, GBP) via `POST /api/checkout` when `STRIPE_SECRET_KEY` is set (`sk_test_` only)
+- Currency selector on landings and tool CTAs; defaults: FR → EUR, EN → USD, UK tools / `en-GB` → GBP
+- Fallback to the legacy Stripe Payment Link (EUR) when the secret key is missing
+- **US Edition** (EN) in the pack: chase emails, final demand letter, written-contract checklist, USD tracker
+- Pack files in `content/pack/` (not served as static files under `/public`)
+- `/succes` and `/en/success`: verify Checkout Session (`session_id`) server-side
+- Downloads only through `/api/download` after verified payment
+- Terms / Privacy (FR + EN), FAQ, mobile sticky CTA
+- E-invoicing 2026 module, invoice checker, EU/US/UK calculators (see below)
+- **UK Edition** (EN, GBP) in the pack: B2B chase emails, letter before action, GBP tracker, statutory interest guide (1998 Act)
 
-## Variables d'environnement (Vercel)
+### Proposed checkout prices (config)
 
-| Variable | Requis | Exemple |
-|---|---|---|
-| `STRIPE_SECRET_KEY` | **Oui** pour débloquer les downloads | `sk_test_…` |
-| `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | Optionnel | `https://buy.stripe.com/test_…` |
+Editable in `lib/checkout/pricing.js` (awaiting owner approval):
 
-Sans `STRIPE_SECRET_KEY`, `/succes` affiche un message clair « configure STRIPE_SECRET_KEY » et **n'expose pas** les fichiers.
+| Currency | Amount |
+|----------|--------|
+| EUR | 19 |
+| USD | 21 |
+| GBP | 17 |
 
-Payment Link TEST par défaut : `https://buy.stripe.com/test_dRm9ATeixbYLdQZeZi0oM00`  
-Price TEST : `price_1UE5ExFmPnFPvlGKCcbNKf0J` · Product : `prod_VEYLBnggQI5JXo`
+## Environment variables (Vercel)
 
-Success URL Stripe (déjà) :  
-`https://kit-relance-impayes-freelance.vercel.app/succes?session_id={CHECKOUT_SESSION_ID}`
+| Variable | Required | Example |
+|----------|----------|---------|
+| `STRIPE_SECRET_KEY` | **Yes** for checkout API and downloads | `sk_test_…` |
+| `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | Optional fallback | `https://buy.stripe.com/test_…` |
 
-## Test paiement (zéro live)
+Without `STRIPE_SECRET_KEY`, buy buttons use the Payment Link (EUR only) and `/succes` shows a clear configuration message without exposing files.
 
-1. Ouvre le Payment Link TEST
-2. Carte : `4242 4242 4242 4242`, date future, CVC quelconque
-3. Après redirect → `/succes?session_id=cs_test_…`
-4. Si `sk_test_` est configuré sur Vercel → téléchargements débloqués
+Default TEST Payment Link: `https://buy.stripe.com/test_dRm9ATeixbYLdQZeZi0oM00`
+
+## Checkout API
+
+`POST /api/checkout` (JSON body):
+
+```json
+{
+  "currency": "usd",
+  "lang": "en",
+  "cancelPath": "/en"
+}
+```
+
+- Creates a Stripe Checkout Session (`mode: payment`) with inline `price_data` for the selected currency
+- `locale`: `fr` or `en` to match the page
+- Success URL: `/succes?session_id={CHECKOUT_SESSION_ID}` (FR) or `/en/success?session_id={CHECKOUT_SESSION_ID}` (EN)
+- Session `metadata.product` = `freelance_invoice_chase_kit` for `/api/verify-session` and `/api/download`
+
+## Test payments (TEST mode only)
+
+1. Deploy preview or run locally with `STRIPE_SECRET_KEY=sk_test_…` in `.env.local`
+2. Open `/` or `/en`, pick **EUR**, **USD**, or **GBP**, and click the buy button
+3. Card: `4242 4242 4242 4242`, any future expiry, any CVC
+4. After redirect, confirm `/succes` or `/en/success` lists downloads
+5. Repeat for each currency on the Vercel preview
+
+Legacy Payment Link flow still works when the API is unavailable (no secret key).
 
 ## Stack
 
 - Next.js 14 (App Router)
-- Stripe Node SDK (vérification session uniquement, pas de PaymentIntent live)
+- Stripe Node SDK (Checkout Sessions, server-side verification)
 - Vercel
 
-## Dev local
+## Local development
 
 ```bash
 npm install
-# .env.local : STRIPE_SECRET_KEY=sk_test_…  (optionnel)
+# .env.local: STRIPE_SECRET_KEY=sk_test_…
 npm run dev
+npm test
+npm run build
 ```
 
-## Contenu du pack (`content/pack/`)
+## Pack content (`content/pack/`)
 
 - `emails-relance.md` : 15 templates + scripts WhatsApp/SMS
 - `courrier-mise-en-demeure.md` : modèle LRAR
@@ -71,8 +98,9 @@ npm run dev
 - **US Edition (EN)** : `us-chase-emails.md`, `us-final-demand-letter.md`, `us-written-contract-checklist.md`, `us-unpaid-invoice-tracker.csv`, `us-edition-guide.md`
 - **UK Edition (EN + guide FR)** : `uk-chase-emails.md`, `uk-letter-before-action.md`, `uk-unpaid-invoice-tracker.csv`, `uk-edition-guide.md`, `uk-edition-guide-fr.md`
 
-## Sécurité
+## Security
 
-- Ne commit **jamais** de secrets (`.env*` ignoré)
-- Zéro Stripe live / zéro dépense réelle sur ce projet de démo
-- Fichiers pack hors `public/`
+- Never commit secrets (`.env*` is gitignored)
+- Stripe **TEST** keys only; no live charges on this project
+- Pack files stay outside `public/`
+- Download routes require a paid session for this product (metadata or Payment Link session)
