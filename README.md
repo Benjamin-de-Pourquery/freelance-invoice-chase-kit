@@ -11,7 +11,7 @@ Digital pack for freelancers: email and letter templates, checklist, CSV tracker
 ## Features (v1.5)
 
 - Bilingual landing **FR** (`/`) and **EN** (`/en`) + language toggle
-- **Multi-currency checkout** (EUR, USD, GBP) via `POST /api/checkout` when `STRIPE_SECRET_KEY` is set (`sk_test_` only)
+- **Multi-currency checkout** (EUR, USD, GBP) via `POST /api/checkout` when `STRIPE_SECRET_KEY` is set (`sk_test_` on previews, `sk_live_` in production)
 - Currency selector on landings and tool CTAs; defaults: FR → EUR, EN → USD, UK tools / `en-GB` → GBP
 - Fallback to the legacy Stripe Payment Link (EUR) when the secret key is missing
 - **US Edition** (EN) in the pack: chase emails, final demand letter, written-contract checklist, USD tracker
@@ -36,7 +36,8 @@ Editable in `lib/checkout/pricing.js` (awaiting owner approval):
 
 | Variable | Required | Example |
 |----------|----------|---------|
-| `STRIPE_SECRET_KEY` | **Yes** for checkout API and downloads | `sk_test_…` |
+| `STRIPE_SECRET_KEY` | **Yes** for checkout API and downloads | `sk_test_…` or `sk_live_…` |
+| `STRIPE_PACK_PAYMENT_LINK_IDS` | Optional: Payment Link ids (`plink_…`, comma separated) allowed to unlock the pack. Without it, only the link whose URL matches `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` (or the built-in default) unlocks | `plink_…` |
 | `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | Optional fallback | `https://buy.stripe.com/test_…` |
 
 Without `STRIPE_SECRET_KEY`, buy buttons use the Payment Link (EUR only) and `/succes` shows a clear configuration message without exposing files.
