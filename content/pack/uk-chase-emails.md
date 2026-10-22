@@ -2,7 +2,7 @@
 
 Personal use. Replace [CLIENT_CONTACT], [CLIENT_COMPANY], [INVOICE], [AMOUNT_GBP], [DUE_DATE], [PAYMENT_LINK], [YOUR_BUSINESS], [DATE], [PAYMENT_DEADLINE], [REFERENCE_RATE_PERCENT], [STATUTORY_RATE_PERCENT].
 
-**B2B commercial contracts only.** These templates are for general information only, not legal advice. Statutory late payment interest and fixed compensation under the Late Payment of Commercial Debts (Interest) Act 1998 and the Late Payment of Commercial Debts Regulations 2013 apply only where the statutory regime applies (for example, business-to-business contracts without a substantial contractual remedy for late payment). Where they may apply, you may be entitled to claim statutory interest (reference rate plus 8% per year) and a fixed compensation sum (40, 70, or 100 GBP depending on the debt size). See GOV.UK and legislation.gov.uk links in `uk-edition-guide.md`.
+**B2B commercial contracts only.** These templates are for general information only, not legal advice. Statutory late payment interest and fixed compensation under the Late Payment of Commercial Debts (Interest) Act 1998 (fixed sums: section 5A) apply only where the statutory regime applies (for example, business-to-business contracts without a substantial contractual remedy for late payment). Where they may apply, you may be entitled to claim statutory interest (reference rate plus 8% per year) and a fixed compensation sum (40, 70, or 100 GBP depending on the debt size). See GOV.UK and legislation.gov.uk links in `uk-edition-guide.md`.
 
 Published by Glint.
 
@@ -35,7 +35,7 @@ Invoice [INVOICE] for £[AMOUNT_GBP] GBP is still unpaid after my earlier remind
 
 Please pay in full by [PAYMENT_DEADLINE] or reply with a firm payment date and your accounts payable reference.
 
-If our contract is a business-to-business agreement and the statutory late payment regime applies, please note that you may be required to pay statutory interest (Bank of England reference rate plus 8% per year, currently [REFERENCE_RATE_PERCENT]% + 8% = [STATUTORY_RATE_PERCENT]% per year if the reference rate is unchanged) and a fixed compensation sum for recovery costs (40, 70, or 100 GBP per invoice, depending on the amount owed). I may be entitled to claim these sums where the law allows. Official summary: https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt
+If our contract is a business-to-business agreement and the statutory late payment regime applies, please note that you may be required to pay statutory interest ([REFERENCE_RATE_PERCENT]% (Bank Rate on the 30 June or 31 December before interest started) + 8% = [STATUTORY_RATE_PERCENT]% per year) and a fixed compensation sum for recovery costs (40, 70, or 100 GBP per invoice, depending on the amount owed). I may be entitled to claim these sums where the law allows. Official summary: https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt
 
 [PAYMENT_LINK]
 

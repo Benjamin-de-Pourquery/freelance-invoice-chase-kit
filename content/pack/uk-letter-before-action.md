@@ -35,7 +35,7 @@ Despite reminders (including emails dated [PRIOR_CONTACT_DATES]), this balance r
 
 **What I am asking you to do**
 
-1. Pay the principal sum of **£[TOTAL_GBP] GBP** by **[PAYMENT_DEADLINE]** (at least 14 calendar days from the date you receive this letter, unless a pre-action protocol requires a longer period for your type of claim).
+1. Pay the principal sum of **£[TOTAL_GBP] GBP** by **[PAYMENT_DEADLINE]** (at least 14 calendar days from the date you receive this letter, unless a pre-action protocol requires a longer period for your type of claim). If your client is an individual or a sole trader, the Pre-Action Protocol for Debt Claims applies instead (30 days to reply, information sheet and reply form): https://www.justice.gov.uk/courts/procedure-rules/civil/protocol/pre-action-protocol-for-debt-claims. This is information, not legal advice.
 2. If you dispute the debt, send a full written explanation and any supporting documents within the same period.
 
 **Payment methods (choose one):**
@@ -46,10 +46,10 @@ Despite reminders (including emails dated [PRIOR_CONTACT_DATES]), this balance r
 
 **Statutory late payment sums (only if the regime applies)**
 
-If the Late Payment of Commercial Debts (Interest) Act 1998 and the Late Payment of Commercial Debts Regulations 2013 apply to this debt, I may be entitled to claim:
+If the Late Payment of Commercial Debts (Interest) Act 1998 applies to this debt, I may be entitled to claim:
 
-- **Statutory interest** from the day after the payment due date until payment, at the rate of the Bank of England reference rate plus 8% per year (see https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt and https://www.legislation.gov.uk/ukpga/1998/20/contents).
-- **Fixed compensation** for recovery costs of **£[FIXED_COMPENSATION_GBP]** for this invoice (40 GBP if the debt is £1,000 or less, 70 GBP if more than £1,000 but less than £10,000, 100 GBP if £10,000 or more: https://www.legislation.gov.uk/uksi/2013/395/contents).
+- **Statutory interest** from the day after the payment due date until payment, at the Bank of England Bank Rate in force on 30 June or 31 December immediately before interest started, plus 8% per year (SI 2002/1675, art. 4) (see https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt and https://www.legislation.gov.uk/ukpga/1998/20/contents).
+- **Fixed compensation** for recovery costs of **£[FIXED_COMPENSATION_GBP]** for this invoice (40 GBP if the debt is less than £1,000, 70 GBP if it is £1,000 to £9,999.99, 100 GBP if it is £10,000 or more: Late Payment of Commercial Debts (Interest) Act 1998, section 5A, https://www.legislation.gov.uk/ukpga/1998/20/section/5A).
 
 I am not providing legal advice. These figures are stated in case the statutory regime applies to our contract.
 
@@ -71,8 +71,8 @@ Yours sincerely,
 
 Court procedure, forms, and pre-action steps differ outside England and Wales. Before sending a demand or starting proceedings, check the official guidance for your jurisdiction:
 
-- **Scotland (simple procedure):** https://www.scotcourts.gov.uk/taking-action/sheriff-court/simple-procedure  
-- **Northern Ireland (small claims):** https://www.courtsni.gov.uk/courts/small-claims  
+- **Scotland (simple procedure):** https://www.scotcourts.gov.uk/taking-action/simple-procedure/  
+- **Northern Ireland (small claims):** https://www.nidirect.gov.uk/articles/small-claims-process  
 
 This letter is drafted for England and Wales. Adapt it with local advice if your debtor or contract is linked to Scotland or Northern Ireland.
 
@@ -82,6 +82,6 @@ This letter is drafted for England and Wales. Adapt it with local advice if your
 
 - [ ] Invoice details, dates, and amounts match your records  
 - [ ] You have proof of earlier chases (`uk-chase-emails.md` sequence)  
-- [ ] Payment deadline allows at least 14 days (or longer if a protocol applies)  
+- [ ] Payment deadline allows at least 14 days (30 days under the Pre-Action Protocol for Debt Claims if the debtor is an individual or a sole trader)  
 - [ ] Fixed compensation tier matches invoice size (see `uk-edition-guide.md`)  
 - [ ] You are willing to issue a claim on MCOL if unpaid (England and Wales)
