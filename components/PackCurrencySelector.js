@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { PACK_CURRENCIES } from "@/lib/checkout/pricing";
 
 /**
@@ -16,6 +17,7 @@ export default function PackCurrencySelector({
   labels,
   compact = false,
 }) {
+  const groupName = `pack-currency-${useId().replace(/:/g, "")}`;
   const labelFor = (code) => {
     if (code === "eur") return labels.eur;
     if (code === "usd") return labels.usd;
@@ -30,7 +32,7 @@ export default function PackCurrencySelector({
           <label key={code} className="currency-option">
             <input
               type="radio"
-              name="pack-currency"
+              name={groupName}
               value={code}
               checked={currency === code}
               onChange={() => onChange(code)}
