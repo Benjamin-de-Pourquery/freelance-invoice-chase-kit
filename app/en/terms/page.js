@@ -17,8 +17,8 @@ export default function TermsEnPage() {
       <section className="card">
         <h2>Publisher</h2>
         <p>
-          Digital product by <strong>Nazruden</strong>. Contact:{" "}
-          <a href="https://github.com/Nazruden" rel="noopener noreferrer">github.com/Nazruden</a>.
+          Digital product by <strong>Glint</strong>. Contact:{" "}
+          <a href="mailto:glintapps@proton.me">glintapps@proton.me</a>.
         </p>
         <h2>Product</h2>
         <p>
@@ -26,7 +26,10 @@ export default function TermsEnPage() {
           after verified Stripe payment. No physical shipping.
         </p>
         <h2>Price</h2>
-        <p>€19 one-time payment via Stripe (card checkout).</p>
+        <p>
+          One-time payment via Stripe (card checkout). The amount shown on the purchase page applies
+          in the currency you select: euro (EUR), US dollar (USD), or pound sterling (GBP).
+        </p>
         <h2>Disclaimer</h2>
         <p>
           This pack is <strong>not legal, tax or accounting advice</strong>. Templates are practical

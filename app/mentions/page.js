@@ -17,9 +17,8 @@ export default function MentionsPage() {
       <section className="card">
         <h2>Éditeur</h2>
         <p>
-          Produit digital proposé par <strong>Nazruden</strong> (personne physique / micro-entreprise).
-          Contact via le profil GitHub :{" "}
-          <a href="https://github.com/Nazruden" rel="noopener noreferrer">github.com/Nazruden</a>.
+          Produit digital proposé par <strong>Glint</strong>. Contact :{" "}
+          <a href="mailto:glintapps@proton.me">glintapps@proton.me</a>.
         </p>
         <h2>Nature du produit</h2>
         <p>
@@ -27,7 +26,11 @@ export default function MentionsPage() {
           paiement Stripe vérifié. Aucun envoi postal / physique.
         </p>
         <h2>Prix</h2>
-        <p>19 € TTC, paiement unique via Stripe (carte bancaire).</p>
+        <p>
+          Paiement unique via Stripe (carte bancaire). Le montant affiché sur la page d&apos;achat
+          s&apos;applique dans la devise choisie : euro (EUR), dollar US (USD) ou livre sterling
+          (GBP).
+        </p>
         <h2>Droit de rétractation</h2>
         <p>
           Conformément à l'art. L221-28 du Code de la consommation, le droit de rétractation ne s'applique
