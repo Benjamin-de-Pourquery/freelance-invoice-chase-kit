@@ -1,5 +1,16 @@
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
+import {
+  publisherName,
+  publisherEmail,
+  hostingProviderLines,
+  tradeName,
+  publisherAddress,
+  publisherPhone,
+  publisherPhoneIntl,
+  publisherSiren,
+  publicationDirector,
+} from "@/lib/legal/siteIdentity";
 
 export const metadata = {
   title: "Mentions légales & CGV — Kit Relance Impayés",
@@ -17,9 +28,14 @@ export default function MentionsPage() {
       <section className="card">
         <h2>Éditeur</h2>
         <p>
-          Produit digital proposé par <strong>Nazruden</strong> (personne physique / micro-entreprise).
-          Contact via le profil GitHub :{" "}
-          <a href="https://github.com/Nazruden" rel="noopener noreferrer">github.com/Nazruden</a>.
+          <strong>{publisherName}</strong> (nom commercial {tradeName}), entrepreneur individuel
+          (micro-entreprise).
+          <br />Adresse : {publisherAddress}
+          <br />Téléphone : <a href="tel:+33643548200">{publisherPhone}</a>
+          <br />E-mail : <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>
+          <br />SIREN : {publisherSiren}
+          <br />TVA non applicable, art. 293 B du CGI.
+          <br />Directeur de la publication : {publicationDirector}
         </p>
         <h2>Nature du produit</h2>
         <p>
@@ -45,7 +61,9 @@ export default function MentionsPage() {
           responsabilité de l'acheteur.
         </p>
         <h2>Hébergement</h2>
-        <p>Vercel Inc. : déploiement applicatif Next.js.</p>
+        <p>
+          Hébergeur : {hostingProviderLines.fr}. Déploiement applicatif Next.js.
+        </p>
       </section>
     </main>
   );
