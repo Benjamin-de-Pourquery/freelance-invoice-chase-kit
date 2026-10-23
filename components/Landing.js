@@ -88,6 +88,23 @@ export default function Landing({ t }) {
         </section>
       ) : null}
 
+      {t.ukEditionTitle ? (
+        <section className="card uk-edition-section" style={{ marginTop: 18 }}>
+          <h2>{t.ukEditionTitle}</h2>
+          <p className="lead" style={{ fontSize: "1rem", margin: "0 0 16px" }}>
+            {t.ukEditionLead}
+          </p>
+          <ul className="list">
+            {t.ukEditionBullets.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="note e-invoicing-disclaimer" style={{ marginTop: 16 }}>
+            {t.ukEditionDisclaimer}
+          </p>
+        </section>
+      ) : null}
+
       <section className="card e-invoicing-section" style={{ marginTop: 18 }}>
         <h2>{t.eInvoicingTitle}</h2>
         <p className="lead" style={{ fontSize: "1rem", margin: "0 0 16px" }}>

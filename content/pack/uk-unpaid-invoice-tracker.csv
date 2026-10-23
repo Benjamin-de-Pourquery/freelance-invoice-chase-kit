@@ -1,0 +1,4 @@
+client,invoice_number,amount_gbp,issue_date,due_date,calc_date,days_late,reference_rate_percent,statutory_rate_percent,statutory_interest_gbp,fixed_compensation_gbp,total_statutory_gbp,last_contact_date,last_contact_channel,next_action,next_action_date,status,notes
+Northbridge Ltd,UK-2026-041,1800.00,2026-07-10,2026-08-09,2026-09-20,42,3.75,11.75,24.34,70,94.34,2026-09-05,email,Firm reminder (uk-chase-emails.md section 2),2026-09-22,overdue,Formulas: see uk-edition-guide.md
+Harbour Creative LLP,UK-2026-052,650.00,2026-08-01,2026-08-31,2026-09-20,20,3.75,11.75,4.18,40,44.18,2026-09-12,email,Friendly reminder section 1,2026-09-18,overdue,B2B services contract
+Crown Analytics PLC,UK-2026-033,12500.00,2026-06-01,2026-07-01,2026-09-20,81,3.75,11.75,325.94,100,425.94,2026-08-28,email,Prepare uk-letter-before-action.md,2026-09-25,escalation,No response after final email
