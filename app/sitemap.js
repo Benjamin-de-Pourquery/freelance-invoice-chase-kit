@@ -14,6 +14,8 @@ export default function sitemap() {
     "/en/us-freelance-payment-checker",
     "/outil-interets-retard-uk",
     "/en/uk-late-payment-calculator",
+    "/outil-email-relance",
+    "/en/chase-email-generator",
     "/mentions",
     "/confidentialite",
     "/en/terms",
