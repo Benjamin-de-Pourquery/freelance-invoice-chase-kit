@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
+import { publisherName, publisherEmail } from "@/lib/legal/siteIdentity";
 
 export const metadata = {
   title: "Confidentialité — Kit Relance Impayés",
@@ -15,6 +16,11 @@ export default function ConfidentialitePage() {
       </div>
       <h1>Politique de confidentialité</h1>
       <section className="card">
+        <h2>Responsable du traitement</h2>
+        <p>
+          <strong>{publisherName}</strong> (entrepreneur individuel, nom commercial Glint). Contact :{" "}
+          <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>.
+        </p>
         <h2>Données collectées</h2>
         <p>
           Le site n'implémente pas de compte utilisateur. Le paiement est traité par{" "}
@@ -40,8 +46,9 @@ export default function ConfidentialitePage() {
         </p>
         <h2>Vos droits</h2>
         <p>
-          Pour toute demande relative à vos données de paiement, contactez Stripe et/ou l'éditeur via
-          GitHub. Droit d'accès, rectification, effacement selon le RGPD le cas échéant.
+          Pour toute demande relative à vos données de paiement, contactez Stripe et/ou l'éditeur à{" "}
+          <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>. Droit d'accès, rectification,
+          effacement selon le RGPD le cas échéant.
         </p>
       </section>
     </main>
