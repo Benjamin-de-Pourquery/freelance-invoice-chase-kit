@@ -44,8 +44,8 @@ export default function TermsEnPage() {
         </p>
         <h2>Price</h2>
         <p>
-          One-time payment via Stripe (card checkout). The amount shown on the purchase page applies
-          in the currency you select: euro (EUR), US dollar (USD), or pound sterling (GBP).
+          €19 incl. VAT where applicable (EUR), $21 (USD) or £17 (GBP), one-time payment via Stripe
+          (card checkout), in the currency you select on the purchase page.
         </p>
         <h2>Disclaimer</h2>
         <p>

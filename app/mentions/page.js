@@ -44,9 +44,8 @@ export default function MentionsPage() {
         </p>
         <h2>Prix</h2>
         <p>
-          Paiement unique via Stripe (carte bancaire). Le montant affiché sur la page d&apos;achat
-          s&apos;applique dans la devise choisie : euro (EUR), dollar US (USD) ou livre sterling
-          (GBP).
+          19 € TTC (EUR), 21 $ (USD) ou 17 £ (GBP), paiement unique via Stripe (carte bancaire).
+          Le montant s&apos;applique dans la devise choisie sur la page d&apos;achat.
         </p>
         <h2>Droit de rétractation</h2>
         <p>
