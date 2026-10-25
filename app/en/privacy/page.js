@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
+import { publisherName, publisherEmail } from "@/lib/legal/siteIdentity";
 
 export const metadata = {
   title: "Privacy — Freelancer Overdue Invoice Kit",
@@ -15,6 +16,11 @@ export default function PrivacyEnPage() {
       </div>
       <h1>Privacy policy</h1>
       <section className="card">
+        <h2>Data controller</h2>
+        <p>
+          <strong>{publisherName}</strong> (sole trader, trade name Glint). Contact:{" "}
+          <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>.
+        </p>
         <h2>Data collected</h2>
         <p>
           No user accounts. Payments are handled by <strong>Stripe</strong> (Payment Link / Checkout).
@@ -37,8 +43,9 @@ export default function PrivacyEnPage() {
         </p>
         <h2>Your rights</h2>
         <p>
-          For payment-data requests, contact Stripe and/or the publisher via GitHub. Access,
-          rectification and erasure rights may apply under GDPR.
+          For payment-data requests, contact Stripe and/or the publisher at{" "}
+          <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>. Access, rectification and
+          erasure rights may apply under GDPR.
         </p>
       </section>
     </main>
