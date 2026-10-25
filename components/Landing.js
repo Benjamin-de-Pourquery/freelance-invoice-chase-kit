@@ -43,6 +43,11 @@ export default function Landing({ t, preferGbp = false }) {
           {t.ukLatePaymentToolLabel} →
         </a>
       </p>
+      <p style={{ marginTop: 8 }}>
+        <a className="checker-tool-link" href={t.chaseEmailToolHref}>
+          {t.chaseEmailToolLabel} →
+        </a>
+      </p>
 
       <div className="grid grid-2">
         <section className="card">

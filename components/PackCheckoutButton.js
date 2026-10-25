@@ -13,6 +13,7 @@ import { usePackCheckout } from "@/lib/checkout/usePackCheckout";
  *   className?: string,
  *   showSelector?: boolean,
  *   compactSelector?: boolean,
+ *   preferredCurrency?: string | null,
  * }} props
  */
 export default function PackCheckoutButton({
@@ -23,11 +24,12 @@ export default function PackCheckoutButton({
   className = "cta",
   showSelector = true,
   compactSelector = false,
+  preferredCurrency,
 }) {
   const pathname = usePathname();
   const resolvedCancel = cancelPath || pathname || (lang === "en" ? "/en" : "/");
   const { currency, setCurrency, formattedPrice, selectorLabels, loading, startCheckout } =
-    usePackCheckout({ lang, preferGbp, cancelPath: resolvedCancel });
+    usePackCheckout({ lang, preferGbp, cancelPath: resolvedCancel, preferredCurrency });
 
   const label = ctaLabel.includes("{price}")
     ? ctaLabel.replace("{price}", formattedPrice)

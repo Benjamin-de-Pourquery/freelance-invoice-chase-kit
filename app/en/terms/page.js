@@ -1,5 +1,16 @@
 import Link from "next/link";
 import LangToggle from "@/components/LangToggle";
+import {
+  publisherName,
+  publisherEmail,
+  hostingProviderLines,
+  tradeName,
+  publisherAddress,
+  publisherPhone,
+  publisherPhoneIntl,
+  publisherSiren,
+  publicationDirector,
+} from "@/lib/legal/siteIdentity";
 
 export const metadata = {
   title: "Terms — Freelancer Overdue Invoice Kit",
@@ -17,8 +28,14 @@ export default function TermsEnPage() {
       <section className="card">
         <h2>Publisher</h2>
         <p>
-          Digital product by <strong>Glint</strong>. Contact:{" "}
-          <a href="mailto:glintapps@proton.me">glintapps@proton.me</a>.
+          <strong>{publisherName}</strong> (trade name {tradeName}), French sole trader
+          (entrepreneur individuel, micro-entreprise).
+          <br />Address: {publisherAddress}
+          <br />Phone: <a href="tel:+33643548200">{publisherPhoneIntl}</a>
+          <br />Email: <a href={`mailto:${publisherEmail}`}>{publisherEmail}</a>
+          <br />SIREN: {publisherSiren}
+          <br />VAT not applicable, art. 293 B of the French General Tax Code (CGI).
+          <br />Publication director: {publicationDirector}
         </p>
         <h2>Product</h2>
         <p>
@@ -38,7 +55,9 @@ export default function TermsEnPage() {
         <h2>Liability</h2>
         <p>No recovery-rate guarantee. Use of templates is at the buyer’s sole responsibility.</p>
         <h2>Hosting</h2>
-        <p>Vercel Inc.: Next.js application hosting.</p>
+        <p>
+          Hosting provider: {hostingProviderLines.en}. Next.js application hosting.
+        </p>
       </section>
     </main>
   );
