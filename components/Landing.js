@@ -1,9 +1,14 @@
-import { PAYMENT_LINK } from "@/lib/i18n";
 import LangToggle from "@/components/LangToggle";
 import SiteFooter from "@/components/SiteFooter";
+import { LandingMobileCta, LandingOfferCard, LandingPayStep } from "@/components/LandingPurchase";
+import { PackCheckoutProvider } from "@/lib/checkout/PackCheckoutContext";
 
-export default function Landing({ t }) {
+export default function Landing({ t, preferGbp = false }) {
+  const lang = t.lang === "en" ? "en" : "fr";
+  const cancelPath = lang === "en" ? "/en" : "/";
+
   return (
+    <PackCheckoutProvider lang={lang} preferGbp={preferGbp} cancelPath={cancelPath}>
     <main className="wrap">
       <div className="topbar">
         <span className="badge">{t.badge}</span>
@@ -53,7 +58,8 @@ export default function Landing({ t }) {
             ))}
           </ul>
           <div className="steps">
-            {t.steps.map((s) => (
+            <LandingPayStep t={t} />
+            {t.steps.slice(1).map((s) => (
               <div className="step" key={s.t}>
                 <strong>{s.t}</strong>
                 {s.d}
@@ -64,15 +70,7 @@ export default function Landing({ t }) {
 
         <aside className="card sticky-card">
           <h2>{t.offerTitle}</h2>
-          <div className="price">
-            {t.price} <span>{t.priceSub}</span>
-          </div>
-          <p className="note">{t.audience}</p>
-          <a className="cta" href={PAYMENT_LINK} rel="noopener noreferrer">
-            {t.cta}
-          </a>
-          <p className="note trust-note">{t.trustNote}</p>
-          <p className="note">{t.delivery}</p>
+          <LandingOfferCard t={t} />
         </aside>
       </div>
 
@@ -174,12 +172,11 @@ export default function Landing({ t }) {
       </section>
 
       <div className="mobile-cta">
-        <a className="cta" href={PAYMENT_LINK} rel="noopener noreferrer">
-          {t.cta}
-        </a>
+        <LandingMobileCta t={t} />
       </div>
 
       <SiteFooter t={t} />
     </main>
+    </PackCheckoutProvider>
   );
 }

@@ -116,6 +116,65 @@ h1 {
 }
 .cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .cta-inline { width: auto; display: inline-block; padding: 12px 18px; }
+button.cta {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+button.cta:disabled {
+  opacity: 0.75;
+  cursor: wait;
+  transform: none;
+}
+
+.pack-checkout { width: 100%; }
+.currency-selector {
+  margin: 12px 0 4px;
+  padding: 0;
+  border: none;
+}
+.currency-selector legend {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 8px;
+  padding: 0;
+}
+.currency-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.currency-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+}
+.currency-option:has(input:checked) {
+  border-color: rgba(110, 231, 183, 0.5);
+  color: var(--text);
+  background: rgba(110, 231, 183, 0.08);
+}
+.currency-option input {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+.currency-selector-compact .currency-options {
+  gap: 6px;
+}
+.currency-selector-compact .currency-option {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
 
 .note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
 .pain { color: var(--danger); font-weight: 600; }

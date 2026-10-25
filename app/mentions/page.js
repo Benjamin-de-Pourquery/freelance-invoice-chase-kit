@@ -43,7 +43,10 @@ export default function MentionsPage() {
           paiement Stripe vérifié. Aucun envoi postal / physique.
         </p>
         <h2>Prix</h2>
-        <p>19 € TTC, paiement unique via Stripe (carte bancaire).</p>
+        <p>
+          19 € TTC (EUR), 21 $ (USD) ou 17 £ (GBP), paiement unique via Stripe (carte bancaire).
+          Le montant s&apos;applique dans la devise choisie sur la page d&apos;achat.
+        </p>
         <h2>Droit de rétractation</h2>
         <p>
           Conformément à l'art. L221-28 du Code de la consommation, le droit de rétractation ne s'applique
