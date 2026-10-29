@@ -9,7 +9,12 @@ import {
   evaluateInvoiceMentions,
   summarizeResults,
 } from "@/lib/invoice-checker/evaluate";
-import { MENTION_IDS } from "@/lib/invoice-checker/copy";
+import {
+  CORE_MENTION_IDS,
+  FRANCHISE_WORDING_IDS,
+  MENTION_IDS,
+  REFORM_MENTION_IDS,
+} from "@/lib/invoice-checker/copy";
 
 function OptionCard({ selected, onSelect, children, id }) {
   return (
@@ -56,8 +61,52 @@ function MentionToggle({ checked, onChange, label, id }) {
   );
 }
 
+function ResultList({ results, t }) {
+  return (
+    <ul className="checker-result-list">
+      {results.map((r) => (
+        <li
+          key={r.id}
+          className={`checker-result checker-result--${r.status}`}
+        >
+          <div className="checker-result-main">
+            <span className="checker-result-status">
+              {t.statusLabels[r.status]}
+            </span>
+            <p className="checker-result-label">{t.ruleLabels[r.id]}</p>
+            {t.statusHint[r.status] && (
+              <p className="checker-result-hint">{t.statusHint[r.status]}</p>
+            )}
+            {r.noteKey && t.resultNotes?.[r.noteKey] && (
+              <p className="checker-result-hint">{t.resultNotes[r.noteKey]}</p>
+            )}
+          </div>
+          <a
+            className="checker-source"
+            href={r.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.sourceLinkLabel}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 const defaultMentions = () =>
   Object.fromEntries(MENTION_IDS.map((id) => [id, false]));
+
+function mentionIdsForRegime(vatRegime) {
+  const core = CORE_MENTION_IDS.filter(
+    (id) => !FRANCHISE_WORDING_IDS.includes(id)
+  );
+  if (vatRegime === "franchise") {
+    return [...core, ...FRANCHISE_WORDING_IDS];
+  }
+  return core;
+}
 
 export default function InvoiceChecker({ t, kitBrand }) {
   const [companySize, setCompanySize] = useState("micro");
@@ -94,7 +143,21 @@ export default function InvoiceChecker({ t, kitBrand }) {
     ]
   );
 
+  const coreResults = useMemo(
+    () => results.filter((r) => !r.reformGroup),
+    [results]
+  );
+  const reformResults = useMemo(
+    () => results.filter((r) => r.reformGroup),
+    [results]
+  );
+
   const summary = useMemo(() => summarizeResults(results), [results]);
+
+  const visibleMentionIds = useMemo(
+    () => mentionIdsForRegime(vatRegime),
+    [vatRegime]
+  );
 
   const setMention = useCallback((id, value) => {
     setPresentMentions((prev) => ({ ...prev, [id]: value }));
@@ -138,6 +201,22 @@ export default function InvoiceChecker({ t, kitBrand }) {
     footerBrand: kitBrand,
   };
 
+  const renderMentionGroup = (ids) =>
+    ids.map((id) => (
+      <MentionToggle
+        key={id}
+        id={`mention-${id}`}
+        label={t.ruleLabels[id]}
+        checked={!!presentMentions[id]}
+        onChange={(v) => setMention(id, v)}
+      />
+    ));
+
+  const coreMentionIds = visibleMentionIds.filter(
+    (id) => !REFORM_MENTION_IDS.includes(id)
+  );
+  const reformMentionIds = REFORM_MENTION_IDS;
+
   return (
     <main className="wrap checker-wrap">
       <div className="topbar">
@@ -152,11 +231,12 @@ export default function InvoiceChecker({ t, kitBrand }) {
       <p className="lead">{t.lead}</p>
       <p className="note">{t.exhaustiveListNote}</p>
 
-      <section className="card checker-timeline-note" aria-labelledby="timeline-note-title">
-        <h2 id="timeline-note-title">{t.timelineNoteTitle}</h2>
-        <p className="note" style={{ marginTop: 0 }}>{t.timelineNoteBody}</p>
+      <section className="card checker-timeline-note" aria-labelledby="reform-explainer-title">
+        <h2 id="reform-explainer-title">{t.reformExplainerTitle}</h2>
+        <p className="note" style={{ marginTop: 0 }}>{t.reformExplainerBody}</p>
+        <p className="checker-field-label">{t.reformExplainerSourcesHeading}</p>
         <ul className="source-list">
-          {t.timelineSources.map((s) => (
+          {t.reformExplainerSources.map((s) => (
             <li key={s.url}>
               <a href={s.url} target="_blank" rel="noopener noreferrer">
                 {s.label}
@@ -256,16 +336,15 @@ export default function InvoiceChecker({ t, kitBrand }) {
         <section className="card" aria-labelledby="mentions-heading">
           <h2 id="mentions-heading">{t.sectionMentions}</h2>
           <p className="note">{t.runCheck}</p>
+
+          <h3 className="checker-subheading">{t.sectionCoreMentions}</h3>
           <div className="checker-mentions">
-            {MENTION_IDS.map((id) => (
-              <MentionToggle
-                key={id}
-                id={`mention-${id}`}
-                label={t.ruleLabels[id]}
-                checked={!!presentMentions[id]}
-                onChange={(v) => setMention(id, v)}
-              />
-            ))}
+            {renderMentionGroup(coreMentionIds)}
+          </div>
+
+          <h3 className="checker-subheading">{t.sectionReformMentions}</h3>
+          <div className="checker-mentions">
+            {renderMentionGroup(reformMentionIds)}
           </div>
         </section>
       </div>
@@ -299,32 +378,11 @@ export default function InvoiceChecker({ t, kitBrand }) {
           </span>
         </div>
 
-        <ul className="checker-result-list">
-          {results.map((r) => (
-            <li
-              key={r.id}
-              className={`checker-result checker-result--${r.status}`}
-            >
-              <div className="checker-result-main">
-                <span className="checker-result-status">
-                  {t.statusLabels[r.status]}
-                </span>
-                <p className="checker-result-label">{t.ruleLabels[r.id]}</p>
-                {t.statusHint[r.status] && (
-                  <p className="checker-result-hint">{t.statusHint[r.status]}</p>
-                )}
-              </div>
-              <a
-                className="checker-source"
-                href={r.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Source
-              </a>
-            </li>
-          ))}
-        </ul>
+        <h3 className="checker-subheading">{t.sectionCoreResults}</h3>
+        <ResultList results={coreResults} t={t} />
+
+        <h3 className="checker-subheading">{t.sectionReformResults}</h3>
+        <ResultList results={reformResults} t={t} />
       </section>
 
       <aside className="card checker-cta">
