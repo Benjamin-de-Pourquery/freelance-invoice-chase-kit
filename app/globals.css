@@ -600,6 +600,18 @@ footer a { color: var(--muted); }
   .topbar, .checker-results-actions, .checker-cta, footer, .checker-back, .lang-toggle, .badge { display: none !important; }
   body { background: #fff; color: #000; }
   .card { box-shadow: none; border: 1px solid #ccc; }
+  .payment-terms-form,
+  .payment-terms-context,
+  .payment-terms-cta,
+  .payment-terms-legal-banner { display: none !important; }
+  .payment-terms-wrap .checker-grid { display: block; }
+  .payment-terms-pre {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 0;
+    font-size: 11pt;
+  }
 }
 
 .checker-input-wide { max-width: 100%; }

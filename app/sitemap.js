@@ -16,6 +16,8 @@ export default function sitemap() {
     "/en/uk-late-payment-calculator",
     "/outil-email-relance",
     "/en/chase-email-generator",
+    "/outil-conditions-paiement",
+    "/en/payment-terms-generator",
     "/mentions",
     "/confidentialite",
     "/en/terms",
