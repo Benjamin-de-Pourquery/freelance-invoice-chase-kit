@@ -37,6 +37,9 @@ export default function CommercialDebtRecoveryGuideEnPage() {
       <span className="badge">{t.badge}</span>
       <h1>{t.title}</h1>
       <p className="lead">{t.lead}</p>
+      {t.scopeParagraphs?.map((paragraph) => (
+        <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+      ))}
       <p className="note">{t.legalDisclaimer}</p>
       <p style={{ marginTop: 16 }}>
         <Link className="checker-tool-link" href={t.frGuideHref}>
