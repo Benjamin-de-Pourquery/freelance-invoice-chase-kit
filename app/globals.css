@@ -507,6 +507,22 @@ footer a { color: var(--muted); }
 .checker-timeline-note h2 { font-size: 1rem; margin: 0 0 8px; }
 .checker-timeline-note { margin-top: 18px; }
 
+.guide-not-in-force {
+  margin-top: 18px;
+  border: 1px solid #c9a227;
+  background: rgba(201, 162, 39, 0.08);
+}
+.guide-not-in-force h2 { color: #8a6d12; }
+.guide-steps li { margin-bottom: 12px; }
+.guide-self-check-result {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.guide-self-check-result--likely { border-left: 3px solid #2d8a4e; padding-left: 12px; }
+.guide-self-check-result--unlikely { border-left: 3px solid #b45309; padding-left: 12px; }
+.guide-self-check-result--uncertain { border-left: 3px solid #64748b; padding-left: 12px; }
+
 .checker-subheading {
   font-size: 0.95rem;
   margin: 18px 0 10px;
