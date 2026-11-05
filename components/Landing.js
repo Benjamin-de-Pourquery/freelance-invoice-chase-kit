@@ -48,6 +48,13 @@ export default function Landing({ t, preferGbp = false }) {
           {t.chaseEmailToolLabel} →
         </a>
       </p>
+      {t.commercialDebtGuideHref ? (
+        <p style={{ marginTop: 8 }}>
+          <a className="checker-tool-link" href={t.commercialDebtGuideHref}>
+            {t.commercialDebtGuideLabel} →
+          </a>
+        </p>
+      ) : null}
 
       <div className="grid grid-2">
         <section className="card">

@@ -18,6 +18,8 @@ export default function sitemap() {
     "/en/chase-email-generator",
     "/outil-conditions-paiement",
     "/en/payment-terms-generator",
+    "/guide-recouvrement-creances-commerciales-incontestees",
+    "/en/commercial-debt-recovery-procedure",
     "/mentions",
     "/confidentialite",
     "/en/terms",
